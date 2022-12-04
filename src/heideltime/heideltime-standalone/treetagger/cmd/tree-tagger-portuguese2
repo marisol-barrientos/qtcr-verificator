@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Set these paths appropriately
+
+BIN="/home/marisolbarrientosmoreno/Desktop/Summer_Semester/i17/deadline/regulatory-documents-tie/temporal_compliance_verificator/src/heideltime/heideltime-standalone/treetagger/bin"
+CMD="/home/marisolbarrientosmoreno/Desktop/Summer_Semester/i17/deadline/regulatory-documents-tie/temporal_compliance_verificator/src/heideltime/heideltime-standalone/treetagger/cmd"
+LIB="/home/marisolbarrientosmoreno/Desktop/Summer_Semester/i17/deadline/regulatory-documents-tie/temporal_compliance_verificator/src/heideltime/heideltime-standalone/treetagger/lib"
+
+OPTIONS="-token -lemma -sgml"
+
+TOKENIZER=${CMD}/utf8-tokenize.perl
+TAGGER=${BIN}/tree-tagger
+TAGGER=tree-tagger
+ABBR_LIST=${LIB}/portuguese-abbreviations
+PARFILE=${LIB}/portuguese2.par
+
+$TOKENIZER -p -a $ABBR_LIST $* |
+$TAGGER $OPTIONS $PARFILE

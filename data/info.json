@@ -1,0 +1,223 @@
+{
+	"processDescriptions":[
+		{
+			"internal_name": "Steps_to_follow_after_receiving_Expense_Report",
+			"id": "1b407862-e95b-433d-8e9d-53d1b961cc46",
+			"sources":[
+				{
+					"document": "Master Thesis: 'Automated Generation of Business Process Models from Natural Language Input' (Fabian Friedrich, 2010)",
+					"name":"Text 31: Process Description 9-5: Exercise 4.",
+					"link":"https://frapu.de/pdf/friedrich2010.pdf"
+				}
+			],
+			"notes": [],
+			"logsId": [],
+			"model": "example4_cpee"
+		},
+		{
+			"internal_name": "Turbopixel",
+			"id": "6b9f82d9-1633-43e3-a705-37a2ab4d9946",
+			"sources":[
+				{
+					"document": "Master Thesis: 'Automated Generation of Business Process Models from Natural Language Input' (Fabian Friedrich, 2010)",
+					"name":"Text 22: Process Description 6-4: Turbopixel.",
+					"link":"https://frapu.de/pdf/friedrich2010.pdf"
+				}
+			],
+			"notes": [" Does 'a week before' means '7 days before' or 'in the week before'? What is a 'QA check on the minutes'? Is it normally rephrased with a more natural sentence?"],
+			"logsId": [],
+			"model": ""
+		},
+		{
+			"internal_name": "Mortgage_Offer",
+			"id": "6c56ee79-5273-4cf5-a9cc-0c43cbf5db2c",
+			"sources":[
+				{
+					"document": "Master Thesis: 'Automated Generation of Business Process Models from Natural Language Input' (Fabian Friedrich, 2010)",
+					"name":"Text 28: Process Description 9-2: Exercise 2",
+					"link":"https://frapu.de/pdf/friedrich2010.pdf"
+				}
+			],
+			"notes": [],
+			"logsId": [],
+			"model": ""
+		},
+		{
+			"internal_name": "Billing_process_of_an_Internet_Service_Provider_(ISP)",
+			"id": "6fa1a5d9-7296-473a-96df-a1750d0f25f7",
+			"sources":[
+				{
+					"name":"11.14 - Exercise 4.7 Model the billing process of an Internet Service Provider (ISP) - originalText",
+					"link":"https://github.com/thanner/ProcessDescriptions/tree/master/originalText"
+				}
+			],
+			"notes": [],
+			"logsId": [],
+			"model": ""
+		},
+		{
+			"internal_name": "Town_Planning_Authority_scheduling_Meetings",
+			"id": "8b3a81a5-302f-4fe6-99e8-48951dcbb1c5",
+			"sources":[
+				{
+					"document": "Master Thesis: 'Automated Generation of Business Process Models from Natural Language Input' (Fabian Friedrich, 2010)",
+					"name":"Text 29: Process Description 9-3: Exercise 3a",
+					"link":"https://frapu.de/pdf/friedrich2010.pdf"
+				},
+				{
+					"name":"9.3 - Exercise 3a - originalText",
+					"link":"https://github.com/thanner/ProcessDescriptions/tree/master/originalText"
+				}
+			],
+			"notes": [],
+			"logsId": [],
+			"model": ""
+		},
+		{
+			"internal_name": "Intaker_Workflow",
+			"id": "9efb8334-e3ce-4e5b-af7f-aab1f39b3014",
+			"sources":[
+				{
+					"document": "Master Thesis: 'Automated Generation of Business Process Models from Natural Language Input' (Fabian Friedrich, 2010)",
+					"name":"Text 15: Process Description 4-1: Intaker Workflow.",
+					"link":"https://frapu.de/pdf/friedrich2010.pdf"
+				},
+				{
+					"name":"4.1 - Intaker Work - originalText",
+					"link":"https://github.com/thanner/ProcessDescriptions/tree/master/originalText"
+				}
+
+			],
+			"notes": ["Not clear if 'this 2 weeks' should start counting from the starting of the process or if they start counting after 'a message is generated to the customer'."],
+			"logsId": [],
+			"model": ""
+		},
+		{
+			"internal_name": "Setting_up_a_Callover",
+			"id": "14d5b92e-1db9-4c32-8c99-9775d39964c7",
+			"sources":[
+				{
+					"name":"11.13 - Example 4.3 Let us consider the following process at a small claims tribunal. - originalText",
+					"link":"https://github.com/thanner/ProcessDescriptions/tree/master/originalText"
+				}
+			],
+			"notes": [],
+			"logsId": [],
+			"model": ""
+		},
+		{
+			"internal_name": "SLA_Violation",
+			"id": "63d7a5a0-1ef3-43ba-b4e1-6b3821ad3f4b",
+			"sources":[
+				{
+					"document": "Master Thesis: 'Automated Generation of Business Process Models from Natural Language Input' (Fabian Friedrich, 2010)",
+					"name":"Text 5: Process Description 2-1: SLA Violation.",
+					"link":"https://frapu.de/pdf/friedrich2010.pdf"
+				}
+			],
+			"notes": ["Since the beginning of this process at any time they mention when the process started. Even you don't know if they are referring to the first/second/third Wednesday after the process began..."],
+			"logsId": [],
+			"model": ""
+		},
+		{
+			"internal_name": "Claim_Handling_Process",
+			"id": "747f4fa6-d252-4695-9bba-3db272afd937",
+			"sources":[
+				{
+					"document": "Master Thesis: 'Automated Generation of Business Process Models from Natural Language Input' (Fabian Friedrich, 2010)",
+					"name":"Text 10: Process Description 3-4: 2009-4 Event-based Gateways.",
+					"link":"https://frapu.de/pdf/friedrich2010.pdf"
+				}
+			],
+			"notes": ["Here is missing: 'connected by whom??'', and 'when should the sales representative call the customer'?"],
+			"logsId": [],
+			"model": ""
+		},
+		{
+			"internal_name": "Supplier_Switch",
+			"id": "918c2164-2da6-4b51-af80-91d5b393cca0",
+			"sources":[
+				{
+					"document": "Master Thesis: 'Automated Generation of Business Process Models from Natural Language Input' (Fabian Friedrich, 2010)",
+					"name":"Text 6: Process Description 2-2: Supplier Switch.",
+					"link":"https://frapu.de/pdf/friedrich2010.pdf"
+				},
+				{
+					"name":"2.2 - Supplier Switch - originalText",
+					"link":"https://github.com/thanner/ProcessDescriptions/tree/master/originalText"
+				}
+			],
+			"notes": [],
+			"logsId": [],
+			"model": ""
+		},
+		{
+			"internal_name": "Conduct_Directions_Hearing",
+			"id": "1154f52d-f333-4be5-8932-de5983e68841",
+			"sources":[
+				{
+					"document": "Master Thesis: 'Automated Generation of Business Process Models from Natural Language Input' (Fabian Friedrich, 2010)",
+					"name":"Text 8: Process Description 3-2: 2009-2 Conduct Directions Hearing",
+					"link":"https://frapu.de/pdf/friedrich2010.pdf"
+				},
+				{
+					"name":"3.2 - Conduct Directions Hearing - originalText",
+					"link":"https://github.com/thanner/ProcessDescriptions/tree/master/originalText"
+				}
+			],
+			"notes": [],
+			"logsId": [],
+			"model": ""
+		},
+		{
+			"internal_name": "Inubit_AG_Tutorial",
+			"id": "8275cca4-8827-4150-9da7-0eb317ed98c2",
+			"sources":[
+				{
+					"document": "Master Thesis: 'Automated Generation of Business Process Models from Natural Language Input' (Fabian Friedrich, 2010)",
+					"name":"Text 21: Process Description 6-2: inubit AG Tutorial.",
+					"link":"https://frapu.de/pdf/friedrich2010.pdf"
+				},
+				{
+					"name":"6.2 - inubit AG Tutorial - originalText",
+					"link":"https://github.com/thanner/ProcessDescriptions/tree/master/originalText"
+				}
+			],
+			"notes": [],
+			"logsId": [],
+			"model": ""
+		},
+		{
+			"internal_name": "Meeting_Related_Activities",
+			"id": "f63ff510-cbed-4d95-aa7f-c615baf4e57f",
+			"sources":[
+				{
+					"document": "Master Thesis: 'Automated Generation of Business Process Models from Natural Language Input' (Fabian Friedrich, 2010)",
+					"name":"Text 30: Process Description 9-4: Exercise 3b.",
+					"link":"https://frapu.de/pdf/friedrich2010.pdf"
+				},
+				{
+					"name":"9.4 - Exercise 3b - originalText",
+					"link":"https://github.com/thanner/ProcessDescriptions/tree/master/originalText"
+				}
+			],
+			"notes": ["From which day does it start counting these five days? "],
+			"logsId": [],
+			"model": ""
+		},
+		{
+			"internal_name": "Management_of_Account_Defaulter",
+			"id": "f4302d1d-3f34-4359-a819-6a63bb69b71d",
+			"sources":[
+				{
+					"document": "Master Thesis: 'Automated Generation of Business Process Models from Natural Language Input' (Fabian Friedrich, 2010)",
+					"name":"Text 28: Process Description 9-2: Exercise 2.",
+					"link":"https://frapu.de/pdf/friedrich2010.pdf"
+				}
+			],
+			"notes": [],
+			"logsId": [],
+			"model": ""
+		}
+	]
+}

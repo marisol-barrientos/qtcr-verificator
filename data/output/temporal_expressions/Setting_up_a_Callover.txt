@@ -1,0 +1,17 @@
+
+
+Process Description: Setting_up_a_Callover.txt
+Sentence: in a small claims tribunal, callovers occur once a month, to set down the matter for the upcoming trials.
+Annotated Time: once a month
+Value: P1MFrequency: 1
+Time Type: SET
+Process Description: Setting_up_a_Callover.txt
+Sentence: the process for setting up a callover starts three weeks prior to the callover day, with the preparation of the callover list containing information such as contact details of the involved parties and estimated hearing date.
+Annotated Time: three weeks
+Value: P3W
+Time Type: DURATION
+Process Description: Setting_up_a_Callover.txt
+Sentence: one week prior to the callover, the involved parties are contacted to determine if they are all ready to go to trial.
+Annotated Time: one week
+Value: P1W
+Time Type: DURATION

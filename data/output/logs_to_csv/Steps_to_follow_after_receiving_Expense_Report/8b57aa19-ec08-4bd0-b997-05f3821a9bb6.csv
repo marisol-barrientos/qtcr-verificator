@@ -1,0 +1,10 @@
+concept:name,cpee:activity_uuid,concept:name,lifecycle:transition,shift:timestamp
+receive expense report,c80747c6de0e553060f47587dfc167be,receive expense report,start,2022-11-06 07:30:00+01:00
+receive expense report,c80747c6de0e553060f47587dfc167be,receive expense report,complete,2022-11-06 07:30:03+01:00
+create account,f9f8d890718c2d0869f83fae31fb8149,create account,start,2022-11-06 07:30:03+01:00
+wait 7 days,9171b21888c44a71315528d2898f2cd3,wait 7 days,start,2022-11-06 07:30:03+01:00
+create account,f9f8d890718c2d0869f83fae31fb8149,create account,complete,2022-11-06 07:30:06+01:00
+supervisor review,6ec61c4c037f4a33e19a2ed5ea54592b,supervisor review,start,2022-11-06 07:30:06+01:00
+supervisor review,6ec61c4c037f4a33e19a2ed5ea54592b,supervisor review,complete,2022-11-09 07:27:13.200000+01:00
+send rejection notice by email,9be998a5279083bd7e5951cea09a4a67,send rejection notice by email,start,2022-11-09 07:27:13.200000+01:00
+send rejection notice by email,9be998a5279083bd7e5951cea09a4a67,send rejection notice by email,complete,2022-11-09 07:27:16.200000+01:00

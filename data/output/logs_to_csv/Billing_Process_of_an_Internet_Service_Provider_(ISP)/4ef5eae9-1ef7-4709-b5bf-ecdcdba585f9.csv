@@ -1,0 +1,25 @@
+concept:name,cpee:activity_uuid,concept:name,lifecycle:transition,shift:timestamp
+send invoice,ab6c03d01f418f189b8e8ef5907c5c94,send invoice,start,2023-05-01 07:30:00+02:00
+send invoice,ab6c03d01f418f189b8e8ef5907c5c94,send invoice,complete,2023-05-01 07:30:03+02:00
+customer pays,622a1b726a426798750de472ec334d3e,customer pays,start,2023-05-01 07:30:03+02:00
+wait 7 days,db31b7d28d979bb53215274164b6055b,wait 7 days,start,2023-05-01 07:30:03+02:00
+wait 7 days,db31b7d28d979bb53215274164b6055b,wait 7 days,complete,2023-05-08 07:30:03+02:00
+debit outstanding amount,20ba0c772cca1bc7470c5d12b9308088,debit outstanding amount,start,2023-05-08 07:30:03+02:00
+debit outstanding amount,20ba0c772cca1bc7470c5d12b9308088,debit outstanding amount,complete,2023-05-08 07:30:06+02:00
+wait 1 day,ce2304867bd19495abaf3bd2f531de77,wait 1 day,start,2023-05-08 07:30:06+02:00
+wait 1 day,ce2304867bd19495abaf3bd2f531de77,wait 1 day,complete,2023-05-09 07:30:06+02:00
+notify customer,a6aeda3894a2d9374e77b245f9bc400b,notify customer,start,2023-05-09 07:30:06+02:00
+notify customer,a6aeda3894a2d9374e77b245f9bc400b,notify customer,complete,2023-05-09 07:30:09+02:00
+wait 1 day,7297b211a0a0c1ff1ae5d89056edafb5,wait 1 day,start,2023-05-09 07:30:09+02:00
+wait 1 day,7297b211a0a0c1ff1ae5d89056edafb5,wait 1 day,complete,2023-05-10 07:30:09+02:00
+re-attempt debit outstanding amount,99b648f5f53be69f84d865fe6cbfbe85,re-attempt debit outstanding amount,start,2023-05-10 07:30:09+02:00
+re-attempt debit outstanding amount,99b648f5f53be69f84d865fe6cbfbe85,re-attempt debit outstanding amount,complete,2023-05-10 07:30:12+02:00
+wait 1 day,236376552661504f023957ed2c5fce37,wait 1 day,start,2023-05-10 07:30:12+02:00
+wait 1 day,236376552661504f023957ed2c5fce37,wait 1 day,complete,2023-05-11 07:30:12+02:00
+charge late fee,9a6d8f68b87ec42ec874adfc1a864095,charge late fee,start,2023-05-11 07:30:12+02:00
+charge late fee,9a6d8f68b87ec42ec874adfc1a864095,charge late fee,complete,2023-05-11 07:30:15+02:00
+wait 4 days,6305a05e704bc8958825214d755af91b,wait 4 days,start,2023-05-11 07:30:15+02:00
+wait 4 days,6305a05e704bc8958825214d755af91b,wait 4 days,complete,2023-05-15 07:30:15+02:00
+suspend service,0250df22e43ab9a59d1740678cf66bca,suspend service,start,2023-05-15 07:30:15+02:00
+suspend service,0250df22e43ab9a59d1740678cf66bca,suspend service,complete,2023-05-15 07:30:18+02:00
+customer pays,622a1b726a426798750de472ec334d3e,customer pays,complete,2023-05-11 15:32:27+02:00

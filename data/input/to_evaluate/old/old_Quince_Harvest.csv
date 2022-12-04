@@ -1,0 +1,11 @@
+sentence,time_annotation,time_type,value,quantity,frequency,scope,condition
+The quince harvesting process takes place in October and November.,October,DATE,2023-10,,,,
+The quince harvesting process takes place in October and November.,November,DATE,2022-11,,,,
+"Every day, from 7am the manager checks that the plantation has not been affected by codling moth, if it is affected that day's production is interrupted.",Every day,SET,P1D,EVERY,,,
+"Every day, from 7am the manager checks that the plantation has not been affected by codling moth, if it is affected that day's production is interrupted.",7am,TIME,XXXX-XX-XXT07:00,,,,
+"The employees begin to pick the fruits at 8am, when the quinces have almost no dew.",8am,TIME,XXXX-XX-XXT08:00,,,,
+"If the workers have not taken a break before 1pm, the manager reminds them that they should take a break soon.",1pm,TIME,XXXX-XX-XXT13:00,,,,
+"7 hours after the employees started picking the fruits, the trucks come and begin to collect the baskets with the quinces at most until 5pm.",7 hours,DURATION,PT7H,,,,
+"7 hours after the employees started picking the fruits, the trucks come and begin to collect the baskets with the quinces at most until 5pm.",5pm,TIME,XXXX-XX-XXT17:00,,,,
+The supervisor records the fallen fruit not later than 30 minutes after the trucks have finished collecting the baskets.,30 minutes,DURATION,PT30M,,,,
+"In the evening, the supervisor records the total number of kilos collected and the hours the employees have worked.",In the evening,TIME,XXXX-XX-XXTEV,,,,

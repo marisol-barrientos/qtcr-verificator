@@ -1,0 +1,7 @@
+
+Process Description: Conduct_Directions_Hearing.txt
+Sentence: Each morning, the files which have yet to be processed need to be checked, to make sure they are in order for the court hearing that day.
+Annotated Time: Each morning
+Time Type: SET
+Value: PTMO
+Quantity: EVERY

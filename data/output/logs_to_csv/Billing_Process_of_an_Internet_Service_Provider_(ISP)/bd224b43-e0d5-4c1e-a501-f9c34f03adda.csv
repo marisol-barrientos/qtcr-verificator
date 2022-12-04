@@ -1,0 +1,25 @@
+concept:name,cpee:activity_uuid,concept:name,lifecycle:transition,shift:timestamp
+send invoice,8a3ab9d8328738dd4d1b9aada6c39283,send invoice,start,2024-11-01 07:30:00+01:00
+send invoice,8a3ab9d8328738dd4d1b9aada6c39283,send invoice,complete,2024-11-01 07:30:03+01:00
+customer pays,7c71a138c50dc3ccfbe7ec49ef5883c6,customer pays,start,2024-11-01 07:30:03+01:00
+wait 7 days,8bff924656b044d17d46f4c2122ac108,wait 7 days,start,2024-11-01 07:30:03+01:00
+wait 7 days,8bff924656b044d17d46f4c2122ac108,wait 7 days,complete,2024-11-08 07:30:03+01:00
+debit outstanding amount,df481776cf4b4b52f558d7e4f1a236f5,debit outstanding amount,start,2024-11-08 07:30:03+01:00
+debit outstanding amount,df481776cf4b4b52f558d7e4f1a236f5,debit outstanding amount,complete,2024-11-08 07:30:06+01:00
+wait 1 day,f5412afe5b82f9a3ad1e99a15debe161,wait 1 day,start,2024-11-08 07:30:06+01:00
+wait 1 day,f5412afe5b82f9a3ad1e99a15debe161,wait 1 day,complete,2024-11-09 07:30:06+01:00
+notify customer,9b88dca969bdf832cf20d955a5ca7114,notify customer,start,2024-11-09 07:30:06+01:00
+notify customer,9b88dca969bdf832cf20d955a5ca7114,notify customer,complete,2024-11-09 07:30:09+01:00
+wait 1 day,fe5ca9f00bfa61d3cd391c7b9e8947e2,wait 1 day,start,2024-11-09 07:30:09+01:00
+wait 1 day,fe5ca9f00bfa61d3cd391c7b9e8947e2,wait 1 day,complete,2024-11-10 07:30:09+01:00
+re-attempt debit outstanding amount,29c68b111ebc6c3ea9b1057658c05a5f,re-attempt debit outstanding amount,start,2024-11-10 07:30:09+01:00
+re-attempt debit outstanding amount,29c68b111ebc6c3ea9b1057658c05a5f,re-attempt debit outstanding amount,complete,2024-11-10 07:30:12+01:00
+wait 1 day,a16eec09b918f138c75d20d3c94ef72b,wait 1 day,start,2024-11-10 07:30:12+01:00
+wait 1 day,a16eec09b918f138c75d20d3c94ef72b,wait 1 day,complete,2024-11-11 07:30:12+01:00
+charge late fee,7eee5cc3bfda69a12c518e32a2b97ac9,charge late fee,start,2024-11-11 07:30:12+01:00
+charge late fee,7eee5cc3bfda69a12c518e32a2b97ac9,charge late fee,complete,2024-11-11 07:30:15+01:00
+wait 4 days,7aef1f209da6a9544c293023c549df40,wait 4 days,start,2024-11-11 07:30:15+01:00
+wait 4 days,7aef1f209da6a9544c293023c549df40,wait 4 days,complete,2024-11-15 07:30:15+01:00
+suspend service,fe2ae752a7bed9bdaeeb1be079fd3d9b,suspend service,start,2024-11-15 07:30:15+01:00
+suspend service,fe2ae752a7bed9bdaeeb1be079fd3d9b,suspend service,complete,2024-11-15 07:30:18+01:00
+customer pays,7c71a138c50dc3ccfbe7ec49ef5883c6,customer pays,complete,2024-11-09 13:19:58.200000+01:00

@@ -1,0 +1,21 @@
+
+Process Description: Supplier_Switch.txt
+Sentence: an additional constraint is that the customer can only withdraw from the offered contract within 7 days, after the 7th day the contract will be regarded as accepted and the process continues.
+Annotated Time: 7 days
+Value: P7D
+Time Type: DURATION
+Process Description: Supplier_Switch.txt
+Sentence: an additional constraint is that the customer can only withdraw from the offered contract within 7 days, after the 7th day the contract will be regarded as accepted and the process continues.
+Annotated Time: 7th day
+Value: 2022-11-
+Time Type: DATE
+Process Description: Supplier_Switch.txt
+Sentence: the confirmation message by the customer is therefore not absolutely necessary (as it will count as accepted after 7 days in any way) but it can speed up the switch process.
+Annotated Time: 7 days
+Value: P7D
+Time Type: DURATION
+Process Description: Supplier_Switch.txt
+Sentence: on the switch-date, but no later than 10 days after power supply has begun, the grid operator transmits the power meter data to the customer service and the old supplier via messages containing a services consumption report.
+Annotated Time: 10 days
+Value: P10D
+Time Type: DURATION

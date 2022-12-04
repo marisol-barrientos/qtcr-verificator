@@ -1,0 +1,25 @@
+process_description_name,original_sentence,annotated_time,time_type,value,quantity,frequency,
+Billing_Process_of_an_Internet_Service_Provider_(ISP),The ISP sends an invoice by email to the customer on the first working day of each month (Day 1).,on the first working day of each month,SET,XXXX-XXX-WORK,,,
+Billing_Process_of_an_Internet_Service_Provider_(ISP),The ISP sends an invoice by email to the customer on the first working day of each month (Day 1).,Day 1,DATE,2022-11-01,,,PERIODICITY
+Billing_Process_of_an_Internet_Service_Provider_(ISP),"On Day 7, the customer has the full outstanding amount automatically debited from their bank account.",Day 7,DATE,2022-11-07,,,
+Billing_Process_of_an_Internet_Service_Provider_(ISP),"If an automatic transaction fails for any reason, the customer is notified on Day 8.",Day 8,DATE,2022-11-08,,,
+Billing_Process_of_an_Internet_Service_Provider_(ISP),"On Day 9, the transaction that failed on Day 7 is re-attempted.",Day 9,DATE,2022-11-09,,,
+Billing_Process_of_an_Internet_Service_Provider_(ISP),"On Day 9, the transaction that failed on Day 7 is re-attempted.",Day 7,DATE,2022-11-07,,,
+Billing_Process_of_an_Internet_Service_Provider_(ISP),"If it fails again, on Day 10 a late fee is charged to the customer's bank account.",Day 10,DATE,2022-11-10,,,
+Billing_Process_of_an_Internet_Service_Provider_(ISP),"On Day 14, the Internet service is suspended until payment is received.",Day 14,DATE,2022-11-14,,,
+Billing_Process_of_an_Internet_Service_Provider_(ISP),"If on Day 30 the payment is still outstanding, the account is closed and a disconnection fee is applied.",Day 30,DATE,2022-11-30,,,
+Management_of_Account_Defaulter,"All of this must be completed by 2:30 pm, if it is not, then an alert should be sent to the supervisor.",2:30 pm,TIME,XXXX-XX-XXT14:30,,,
+Management_of_Account_Defaulter,This must be completed by 4:00 pm otherwise a supervisor should be sent a message.,4:00 pm,TIME,XXXX-XX-XXT16:00,,,
+Meeting_Related_Activities,Committee Members are advised a week before each meeting to read all related documents.,a week,DURATION,P1W,,,
+Quince_Harvest,The quince harvesting process takes place in October and November.,October,DATE,2023-10,,,
+Quince_Harvest,The quince harvesting process takes place in October and November.,November,DATE,2022-11,,,
+Quince_Harvest,"Every day, from 7am the manager checks that the plantation has not been affected by codling moth, if it is affected that day's production is interrupted.",Every day,SET,P1D,EVERY,,CYCLE
+Quince_Harvest,"Every day, from 7am the manager checks that the plantation has not been affected by codling moth, if it is affected that day's production is interrupted.",7am,TIME,XXXX-XX-XXT07:00,,,
+Quince_Harvest,"The employees begin to pick the fruits at 8am, when the quinces have almost no dew.",8am,TIME,XXXX-XX-XXT08:00,,,FIXED DATA ELEMENT
+Quince_Harvest,"If the workers have not taken a break before 1pm, the manager reminds them that they should take a break soon.",1pm,TIME,XXXX-XX-XXT13:00,,,
+Quince_Harvest,"7 hours after the employees started picking the fruits, the trucks come and begin to collect the baskets with the quinces at most until 5pm.",7 hours,DURATION,PT7H,,,VALIDITY PERIOD
+Quince_Harvest,"7 hours after the employees started picking the fruits, the trucks come and begin to collect the baskets with the quinces at most until 5pm.",5pm,TIME,XXXX-XX-XXT17:00,,,
+Quince_Harvest,The supervisor records the fallen fruit not later than 30 minutes after the trucks have finished collecting the baskets.,30 minutes,DURATION,PT30M,,,LAG
+Quince_Harvest,"In the evening, the supervisor records the total number of kilos collected and the hours the employees have worked.",In the evening,TIME,XXXX-XX-XXTEV,,,RESTRICTED ELEMENT
+Steps_to_follow_after_receiving_Expense_Report,"If the request is not completed in 7 days, then the employee must receive an “approval in progress” email.",7 days,DURATION,P7D,,,
+Steps_to_follow_after_receiving_Expense_Report,"If the request is not finished within 30 days, then the process is stopped and the employee.",30 days,DURATION,P30D,,,DURATION

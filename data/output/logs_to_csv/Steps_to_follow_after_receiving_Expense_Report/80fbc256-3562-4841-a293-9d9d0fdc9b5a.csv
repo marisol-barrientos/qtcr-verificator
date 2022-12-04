@@ -1,0 +1,12 @@
+concept:name,cpee:activity_uuid,concept:name,lifecycle:transition,shift:timestamp
+receive expense report,731aacaedbb121d9b6897f6a45fd96f0,receive expense report,start,2022-11-27 07:30:00+01:00
+receive expense report,731aacaedbb121d9b6897f6a45fd96f0,receive expense report,complete,2022-11-27 07:30:03+01:00
+wait 7 days,914308d3df0030bf51e87eeb5186c217,wait 7 days,start,2022-11-27 07:30:03+01:00
+supervisor review,ed7620261e34b8b1bedf830e61c5d18b,supervisor review,start,2022-11-27 07:30:03+01:00
+wait 7 days,914308d3df0030bf51e87eeb5186c217,wait 7 days,complete,2022-12-04 07:30:03+01:00
+"send ""approval in progress"" email",0b5716d739c09404a0fe1c4926b73891,"send ""approval in progress"" email",start,2022-12-04 07:30:03+01:00
+"send ""approval in progress"" email",0b5716d739c09404a0fe1c4926b73891,"send ""approval in progress"" email",complete,2022-12-04 07:30:06+01:00
+wait 23 days,8230954e4fab31c9ce151d199c2810ee,wait 23 days,start,2022-12-04 07:30:06+01:00
+supervisor review,ed7620261e34b8b1bedf830e61c5d18b,supervisor review,complete,2022-12-13 05:11:48.600000+01:00
+send reimbursement to deposit bank account,2cb93acb691b397dee622a744fe2efd1,send reimbursement to deposit bank account,start,2022-12-13 05:11:48.600000+01:00
+send reimbursement to deposit bank account,2cb93acb691b397dee622a744fe2efd1,send reimbursement to deposit bank account,complete,2022-12-14 04:17:05.400000+01:00

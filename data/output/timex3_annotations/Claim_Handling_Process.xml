@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE TimeML SYSTEM "TimeML.dtd">
+<TimeML>
+In the context of a claim handling process, it is sometimes necessary to send a questionnaire to the claimant to gather additional information. The claimant is expected to return the questionnaire within <TIMEX3 tid="t1" type="DURATION" value="P5D">five days</TIMEX3>. If no response is received after <TIMEX3 tid="t2" type="DURATION" value="P5D">five days</TIMEX3>, a reminder is sent to the claimant. If after another <TIMEX3 tid="t3" type="DURATION" value="P5D">five days</TIMEX3> there is still no response, another reminder is sent and so on until the completed questionnaire is received.
+</TimeML>
+

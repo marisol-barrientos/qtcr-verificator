@@ -1,0 +1,11 @@
+
+Process Description: Management_of_Account_Defaulter.txt
+Sentence: all of this must be completed by 2:30 pm, if it is not, then an alert should be sent to the supervisor.
+Annotated Time: 2:30 pm
+Value: XXXX-XX-XXT14:30
+Time Type: TIME
+Process Description: Management_of_Account_Defaulter.txt
+Sentence: this must be completed by 4:00 pm otherwise a supervisor should be sent a message.
+Annotated Time: 4:00 pm
+Value: XXXX-XX-XXT16:00
+Time Type: TIME

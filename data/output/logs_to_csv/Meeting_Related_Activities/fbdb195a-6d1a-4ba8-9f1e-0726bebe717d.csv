@@ -1,0 +1,23 @@
+concept:name,cpee:activity_uuid,concept:name,lifecycle:transition,shift:timestamp
+update group calendars,5ec09206a4fdcb5e23d14b2bde5cb569,update group calendars,start,2022-12-03 07:30:00+01:00
+ensure that documents are uploaded,3b8d5f196c24b95a6de8c94fc8ada51e,ensure that documents are uploaded,start,2022-12-03 07:30:00+01:00
+create meeting folders,d0f3b6f00696d45edf978f1fdf7566b6,create meeting folders,start,2022-12-03 07:30:00+01:00
+update group calendars,5ec09206a4fdcb5e23d14b2bde5cb569,update group calendars,complete,2022-12-03 07:53:24+01:00
+create meeting folders,d0f3b6f00696d45edf978f1fdf7566b6,create meeting folders,complete,2022-12-03 07:41:24+01:00
+ensure that documents are uploaded,3b8d5f196c24b95a6de8c94fc8ada51e,ensure that documents are uploaded,complete,2022-12-03 08:22:12+01:00
+wait until 1 week before meeting,94be15cdbfc888d21e5175ed1080d7d2,wait until 1 week before meeting,start,2022-12-03 08:22:12+01:00
+wait until 1 week before meeting,94be15cdbfc888d21e5175ed1080d7d2,wait until 1 week before meeting,complete,2022-12-03 08:22:12+01:00
+advise to read related documents,7831a2940c66fd64809638fed4e46ea2,advise to read related documents,start,2022-12-03 08:22:12+01:00
+advise to read related documents,7831a2940c66fd64809638fed4e46ea2,advise to read related documents,complete,2022-12-03 09:04:08.390000+01:00
+wait one week or less,1e53ae93daf27b97b2d3d743d44878a5,wait one week or less,start,2022-12-03 09:04:08.390000+01:00
+wait one week or less,1e53ae93daf27b97b2d3d743d44878a5,wait one week or less,complete,2022-12-10 09:04:08.390000+01:00
+hold meeting,cf778c7be8439456707d887f1ee814c7,hold meeting,start,2022-12-10 09:04:08.390000+01:00
+hold meeting,cf778c7be8439456707d887f1ee814c7,hold meeting,complete,2022-12-10 10:40:51.600000+01:00
+produce minutes,da0d030a500413e3347b09203d561265,produce minutes,start,2022-12-10 10:40:51.600000+01:00
+produce minutes,da0d030a500413e3347b09203d561265,produce minutes,complete,2022-12-10 10:45:03.600000+01:00
+conduct QA check on minutes,ec3ba591adf3a7af9bbf191c44c97138,conduct QA check on minutes,start,2022-12-10 10:45:03.600000+01:00
+conduct QA check on minutes,ec3ba591adf3a7af9bbf191c44c97138,conduct QA check on minutes,complete,2022-12-14 10:45:03.600000+01:00
+send minutes to committee members,39f9818bca305466ca4092eca688ef39,send minutes to committee members,start,2022-12-14 10:45:03.600000+01:00
+send minutes to committee members,39f9818bca305466ca4092eca688ef39,send minutes to committee members,complete,2022-12-14 10:49:26.400000+01:00
+update departmental records,df309b0937ce13336404f8f4ef1c74c7,update departmental records,start,2022-12-14 10:49:26.400000+01:00
+update departmental records,df309b0937ce13336404f8f4ef1c74c7,update departmental records,complete,2022-12-14 10:53:45.600000+01:00

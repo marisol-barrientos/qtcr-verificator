@@ -1,0 +1,12 @@
+concept:name,cpee:activity_uuid,concept:name,lifecycle:transition,shift:timestamp
+receive expense report,e0d509336170e80ed49534c029667f27,receive expense report,start,2022-11-29 07:30:00+01:00
+receive expense report,e0d509336170e80ed49534c029667f27,receive expense report,complete,2022-11-29 07:30:03+01:00
+supervisor review,21da4bf65ee7839c7fd124d8fb13102a,supervisor review,start,2022-11-29 07:30:03+01:00
+wait 7 days,26702c798bb8cfe26ce964e4afab04f5,wait 7 days,start,2022-11-29 07:30:03+01:00
+wait 7 days,26702c798bb8cfe26ce964e4afab04f5,wait 7 days,complete,2022-12-06 07:30:03+01:00
+"send ""approval in progress"" email",67c7d70675e595a037336f3fbdc962de,"send ""approval in progress"" email",start,2022-12-06 07:30:03+01:00
+"send ""approval in progress"" email",67c7d70675e595a037336f3fbdc962de,"send ""approval in progress"" email",complete,2022-12-06 07:30:06+01:00
+wait 23 days,3ae7754ca45802087153f5ca410686dd,wait 23 days,start,2022-12-06 07:30:06+01:00
+supervisor review,21da4bf65ee7839c7fd124d8fb13102a,supervisor review,complete,2022-12-13 03:26:41.390000+01:00
+send rejection notice by email,90da4237f83cb34ba1a0c766efb7810f,send rejection notice by email,start,2022-12-13 03:26:41.390000+01:00
+send rejection notice by email,90da4237f83cb34ba1a0c766efb7810f,send rejection notice by email,complete,2022-12-13 03:26:44.390000+01:00

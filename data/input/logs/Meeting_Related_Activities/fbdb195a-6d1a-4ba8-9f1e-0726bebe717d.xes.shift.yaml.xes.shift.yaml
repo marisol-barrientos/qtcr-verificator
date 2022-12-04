@@ -1,0 +1,1070 @@
+---
+log:
+  namespaces:
+    stream: https://cpee.org/datastream/
+    ssn: http://www.w3.org/ns/ssn/
+    sosa: http://www.w3.org/ns/sosa/
+  xes:
+    creator: cpee.org
+    features: nested-attributes
+  extension:
+    time: http://www.xes-standard.org/time.xesext
+    concept: http://www.xes-standard.org/concept.xesext
+    id: http://www.xes-standard.org/identity.xesext
+    lifecycle: http://www.xes-standard.org/lifecycle.xesext
+    cpee: http://cpee.org/cpee.xesext
+    stream: https://cpee.org/datastream/datastream.xesext
+    shift: https://cpee.org/time-shifting/time-shifting.xesext
+  global:
+    trace:
+      concept:name: __INVALID__
+      cpee:name: __INVALID__
+    event:
+      concept:instance: -1
+      concept:name: __INVALID__
+      concept:endpoint: ''
+      id:id: ''
+      cpee:uuid: ''
+      lifecycle:transition: complete
+      cpee:lifecycle:transition: activity/calling
+      time:timestamp: ''
+  trace:
+    concept:name: 6939
+    cpee:name: Meeting Related Activities
+    cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+---
+event:
+  concept:instance: 6939
+  id:id: external
+  cpee:activity: external
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: ready
+  time:timestamp: '2022-11-29T00:16:41.777+01:00'
+---
+event:
+  concept:instance: 6939
+  id:id: external
+  cpee:activity: external
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: basedate
+    value: '2022-12-03'
+  - name: attendee_list
+    value:
+    - a@a.a
+    - b@b.b
+  time:timestamp: '2022-11-29T00:16:41.800+01:00'
+---
+event:
+  concept:instance: 6939
+  id:id: external
+  cpee:activity: external
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: endpoints/change
+  data:
+  - name: timeout
+    value: https-post://cpee.org/services/timeout.php
+  - name: user
+    value: https-post://cpee.org/services/timeout-user.php
+  - name: auto
+    value: https-post://cpee.org/services/timeout-auto.php
+  - name: receive
+    value: https-post://cpee.org/services/timeout-receive.php
+  - name: send
+    value: https-post://cpee.org/services/timeout-send.php
+  - name: subprocess
+    value: https-post://cpee.org/services/timeout-subprocess.php
+  time:timestamp: '2022-11-29T00:16:41.801+01:00'
+---
+event:
+  concept:instance: 6939
+  id:id: external
+  cpee:activity: external
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: attributes/change
+  data:
+  - name: info
+    value: Meeting Related Activities
+  - name: creator
+    value: Christine Ashcreek
+  - name: author
+    value: Christine Ashcreek
+  - name: modeltype
+    value: CPEE
+  - name: guarded
+    value: none
+  - name: guarded_id
+    value: ''
+  - name: model_uuid
+    value: 1fc43528-3e4a-40ee-8503-c0ed7e5d883c
+  - name: model_version
+    value: ''
+  - name: theme
+    value: extended
+  - name: design_dir
+    value: Logs_TIE.dir
+  - name: design_stage
+    value: development
+  time:timestamp: '2022-11-29T00:16:41.831+01:00'
+---
+event:
+  concept:instance: 6939
+  id:id: external
+  cpee:activity: external
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: description/change
+  cpee:description: |
+    <?xml version="1.0"?>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <_shifting>
+        <_shifting_factor>1 hour</_shifting_factor>
+        <_shifting_start>!data.basedate + ", 7:30"</_shifting_start>
+      </_shifting>
+      <_context_data_analysis>
+        <probes/>
+        <ips/>
+      </_context_data_analysis>
+      <parallel wait="-1" cancel="last">
+        <parallel_branch pass="" local="">
+          <call id="a3" endpoint="user">
+            <parameters>
+              <label>update group calendars</label>
+              <arguments>
+                <timeout>!rand(0.5)</timeout>
+              </arguments>
+            </parameters>
+            <annotations>
+              <_timing>
+                <_timing_weight/>
+                <_timing_avg/>
+                <explanations/>
+              </_timing>
+              <_shifting>
+                <_shifting_type>Duration</_shifting_type>
+              </_shifting>
+              <_context_data_analysis>
+                <probes/>
+                <ips/>
+              </_context_data_analysis>
+              <report>
+                <url/>
+              </report>
+              <_notes>
+                <_notes_general/>
+              </_notes>
+            </annotations>
+            <documentation>
+              <input/>
+              <output/>
+              <implementation>
+                <description/>
+              </implementation>
+            </documentation>
+          </call>
+        </parallel_branch>
+        <parallel_branch>
+          <call id="a4" endpoint="auto">
+            <parameters>
+              <label>create meeting folders</label>
+              <arguments>
+                <timeout>!rand(0.5)</timeout>
+              </arguments>
+            </parameters>
+            <annotations>
+              <_timing>
+                <_timing_weight/>
+                <_timing_avg/>
+                <explanations/>
+              </_timing>
+              <_shifting>
+                <_shifting_type>Duration</_shifting_type>
+              </_shifting>
+              <_context_data_analysis>
+                <probes/>
+                <ips/>
+              </_context_data_analysis>
+              <report>
+                <url/>
+              </report>
+              <_notes>
+                <_notes_general/>
+              </_notes>
+            </annotations>
+            <documentation>
+              <input/>
+              <output/>
+              <implementation>
+                <description/>
+              </implementation>
+            </documentation>
+          </call>
+        </parallel_branch>
+        <parallel_branch pass="" local="">
+          <call id="a5" endpoint="user">
+            <parameters>
+              <label>ensure that documents are uploaded</label>
+              <arguments>
+                <timeout>!rand(0.5)</timeout>
+              </arguments>
+            </parameters>
+            <annotations>
+              <_timing>
+                <_timing_weight/>
+                <_timing_avg/>
+                <explanations/>
+              </_timing>
+              <_shifting>
+                <_shifting_type>Duration</_shifting_type>
+              </_shifting>
+              <_context_data_analysis>
+                <probes/>
+                <ips/>
+              </_context_data_analysis>
+              <report>
+                <url/>
+              </report>
+              <_notes>
+                <_notes_general/>
+              </_notes>
+            </annotations>
+            <documentation>
+              <input/>
+              <output/>
+              <implementation>
+                <description/>
+              </implementation>
+            </documentation>
+          </call>
+        </parallel_branch>
+      </parallel>
+      <call id="a6" endpoint="timeout">
+        <parameters>
+          <label>wait until 1 week before meeting</label>
+          <arguments>
+            <timeout>1</timeout>
+          </arguments>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result"/>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+            <_shifting_expression>!rand(0..10).to_s + " days"</_shifting_expression>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <call id="a7" endpoint="send">
+        <parameters>
+          <label>advise to read related documents</label>
+          <arguments>
+            <timeout>1</timeout>
+            <ignore/>
+          </arguments>
+        </parameters>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+        </documentation>
+      </call>
+      <call id="a2" endpoint="timeout">
+        <parameters>
+          <label>wait one week or less</label>
+          <arguments>
+            <timeout>1</timeout>
+          </arguments>
+        </parameters>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+            <_shifting_expression>![rand(5..10),7].min.to_s + " days"</_shifting_expression>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+        </documentation>
+      </call>
+      <call id="a1" endpoint="user">
+        <parameters>
+          <label>hold meeting</label>
+          <arguments>
+            <timeout>!rand(1.0..2.0)</timeout>
+          </arguments>
+        </parameters>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+        </documentation>
+      </call>
+      <call id="a9" endpoint="user">
+        <parameters>
+          <label>produce minutes</label>
+          <arguments>
+            <timeout>!rand(0.5)</timeout>
+          </arguments>
+        </parameters>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+        </documentation>
+      </call>
+      <call id="a10" endpoint="user">
+        <parameters>
+          <label>conduct QA check on minutes</label>
+          <arguments>
+            <timeout>1</timeout>
+          </arguments>
+        </parameters>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+            <_shifting_expression>!rand(1..5).to_s + ' days'</_shifting_expression>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+        </documentation>
+      </call>
+      <call id="a12" endpoint="send">
+        <parameters>
+          <label>send minutes to committee members</label>
+          <arguments>
+            <timeout>0.1</timeout>
+            <ignore/>
+          </arguments>
+        </parameters>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+        </documentation>
+      </call>
+      <call id="a13" endpoint="auto">
+        <parameters>
+          <label>update departmental records</label>
+          <arguments>
+            <timeout>0.1</timeout>
+          </arguments>
+        </parameters>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+        </documentation>
+      </call>
+    </description>
+  time:timestamp: '2022-11-29T00:16:42.129+01:00'
+---
+event:
+  concept:instance: 6939
+  id:id: external
+  cpee:activity: external
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: running
+  time:timestamp: '2022-11-29T00:16:44.570+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: update group calendars
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a3
+  cpee:activity: a3
+  cpee:activity_uuid: 5ec09206a4fdcb5e23d14b2bde5cb569
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: 0.02962359629337563
+  time:timestamp: '2022-11-29T00:16:44.660+01:00'
+  shift:timestamp: '2022-12-03T07:30:00.00+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: ensure that documents are uploaded
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a5
+  cpee:activity: a5
+  cpee:activity_uuid: 3b8d5f196c24b95a6de8c94fc8ada51e
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: 0.8163690767782548
+  time:timestamp: '2022-11-29T00:16:44.780+01:00'
+  shift:timestamp: '2022-12-03T07:30:00.00+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: create meeting folders
+  concept:endpoint: https-post://cpee.org/services/timeout-auto.php
+  id:id: a4
+  cpee:activity: a4
+  cpee:activity_uuid: d0f3b6f00696d45edf978f1fdf7566b6
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: 0.15974107508574031
+  time:timestamp: '2022-11-29T00:16:44.896+01:00'
+  shift:timestamp: '2022-12-03T07:30:00.00+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: update group calendars
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a3
+  cpee:activity: a3
+  cpee:activity_uuid: 5ec09206a4fdcb5e23d14b2bde5cb569
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.02962359629337563'
+  time:timestamp: '2022-11-29T00:16:45.034+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: update group calendars
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a3
+  cpee:activity: a3
+  cpee:activity_uuid: 5ec09206a4fdcb5e23d14b2bde5cb569
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-29T00:16:45.050+01:00'
+  shift:timestamp: '2022-12-03T07:53:24.00+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: create meeting folders
+  concept:endpoint: https-post://cpee.org/services/timeout-auto.php
+  id:id: a4
+  cpee:activity: a4
+  cpee:activity_uuid: d0f3b6f00696d45edf978f1fdf7566b6
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.15974107508574031'
+  time:timestamp: '2022-11-29T00:16:45.071+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: create meeting folders
+  concept:endpoint: https-post://cpee.org/services/timeout-auto.php
+  id:id: a4
+  cpee:activity: a4
+  cpee:activity_uuid: d0f3b6f00696d45edf978f1fdf7566b6
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-29T00:16:45.086+01:00'
+  shift:timestamp: '2022-12-03T07:41:24.00+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: ensure that documents are uploaded
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a5
+  cpee:activity: a5
+  cpee:activity_uuid: 3b8d5f196c24b95a6de8c94fc8ada51e
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.8163690767782548'
+  time:timestamp: '2022-11-29T00:16:45.633+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: ensure that documents are uploaded
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a5
+  cpee:activity: a5
+  cpee:activity_uuid: 3b8d5f196c24b95a6de8c94fc8ada51e
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-29T00:16:45.650+01:00'
+  shift:timestamp: '2022-12-03T08:22:12.00+01:00'
+---
+event:
+  concept:instance: 6939
+  id:id: external
+  cpee:activity: external
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: start
+  cpee:lifecycle:transition: gateway/join
+  time:timestamp: '2022-11-29T00:16:45.676+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: wait until 1 week before meeting
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 94be15cdbfc888d21e5175ed1080d7d2
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '1'
+  time:timestamp: '2022-11-29T00:16:45.751+01:00'
+  shift:timestamp: '2022-12-03T08:22:12.00+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: wait until 1 week before meeting
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 94be15cdbfc888d21e5175ed1080d7d2
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 1'
+  time:timestamp: '2022-11-29T00:16:46.426+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: wait until 1 week before meeting
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 94be15cdbfc888d21e5175ed1080d7d2
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-29T00:16:46.445+01:00'
+  shift:timestamp: '2022-12-03T08:22:12.00+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: advise to read related documents
+  concept:endpoint: https-post://cpee.org/services/timeout-send.php
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: 7831a2940c66fd64809638fed4e46ea2
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '1'
+  - name: ignore
+    value: 
+  time:timestamp: '2022-11-29T00:16:46.542+01:00'
+  shift:timestamp: '2022-12-03T08:22:12.00+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: advise to read related documents
+  concept:endpoint: https-post://cpee.org/services/timeout-send.php
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: 7831a2940c66fd64809638fed4e46ea2
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 1'
+  time:timestamp: '2022-11-29T00:16:47.224+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: advise to read related documents
+  concept:endpoint: https-post://cpee.org/services/timeout-send.php
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: 7831a2940c66fd64809638fed4e46ea2
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-29T00:16:47.241+01:00'
+  shift:timestamp: '2022-12-03T09:04:08.39+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: wait one week or less
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a2
+  cpee:activity: a2
+  cpee:activity_uuid: 1e53ae93daf27b97b2d3d743d44878a5
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '1'
+  time:timestamp: '2022-11-29T00:16:47.329+01:00'
+  shift:timestamp: '2022-12-03T09:04:08.39+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: wait one week or less
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a2
+  cpee:activity: a2
+  cpee:activity_uuid: 1e53ae93daf27b97b2d3d743d44878a5
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 1'
+  time:timestamp: '2022-11-29T00:16:47.996+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: wait one week or less
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a2
+  cpee:activity: a2
+  cpee:activity_uuid: 1e53ae93daf27b97b2d3d743d44878a5
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-29T00:16:48.012+01:00'
+  shift:timestamp: '2022-12-10T09:04:08.39+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: hold meeting
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a1
+  cpee:activity: a1
+  cpee:activity_uuid: cf778c7be8439456707d887f1ee814c7
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: 1.26846625103319
+  time:timestamp: '2022-11-29T00:16:48.094+01:00'
+  shift:timestamp: '2022-12-10T09:04:08.39+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: hold meeting
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a1
+  cpee:activity: a1
+  cpee:activity_uuid: cf778c7be8439456707d887f1ee814c7
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 1.26846625103319'
+  time:timestamp: '2022-11-29T00:16:49.688+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: hold meeting
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a1
+  cpee:activity: a1
+  cpee:activity_uuid: cf778c7be8439456707d887f1ee814c7
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-29T00:16:49.706+01:00'
+  shift:timestamp: '2022-12-10T10:40:51.60+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: produce minutes
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: da0d030a500413e3347b09203d561265
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: 0.36394956248038746
+  time:timestamp: '2022-11-29T00:16:49.788+01:00'
+  shift:timestamp: '2022-12-10T10:40:51.60+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: produce minutes
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: da0d030a500413e3347b09203d561265
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.36394956248038746'
+  time:timestamp: '2022-11-29T00:16:49.842+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: produce minutes
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: da0d030a500413e3347b09203d561265
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-29T00:16:49.858+01:00'
+  shift:timestamp: '2022-12-10T10:45:03.60+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: conduct QA check on minutes
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: ec3ba591adf3a7af9bbf191c44c97138
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '1'
+  time:timestamp: '2022-11-29T00:16:49.939+01:00'
+  shift:timestamp: '2022-12-10T10:45:03.60+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: conduct QA check on minutes
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: ec3ba591adf3a7af9bbf191c44c97138
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 1'
+  time:timestamp: '2022-11-29T00:16:51.759+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: conduct QA check on minutes
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: ec3ba591adf3a7af9bbf191c44c97138
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-29T00:16:51.773+01:00'
+  shift:timestamp: '2022-12-14T10:45:03.60+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: send minutes to committee members
+  concept:endpoint: https-post://cpee.org/services/timeout-send.php
+  id:id: a12
+  cpee:activity: a12
+  cpee:activity_uuid: 39f9818bca305466ca4092eca688ef39
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '0.1'
+  - name: ignore
+    value: 
+  time:timestamp: '2022-11-29T00:16:51.856+01:00'
+  shift:timestamp: '2022-12-14T10:45:03.60+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: send minutes to committee members
+  concept:endpoint: https-post://cpee.org/services/timeout-send.php
+  id:id: a12
+  cpee:activity: a12
+  cpee:activity_uuid: 39f9818bca305466ca4092eca688ef39
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.1'
+  time:timestamp: '2022-11-29T00:16:51.912+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: send minutes to committee members
+  concept:endpoint: https-post://cpee.org/services/timeout-send.php
+  id:id: a12
+  cpee:activity: a12
+  cpee:activity_uuid: 39f9818bca305466ca4092eca688ef39
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-29T00:16:51.929+01:00'
+  shift:timestamp: '2022-12-14T10:49:26.40+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: update departmental records
+  concept:endpoint: https-post://cpee.org/services/timeout-auto.php
+  id:id: a13
+  cpee:activity: a13
+  cpee:activity_uuid: df309b0937ce13336404f8f4ef1c74c7
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '0.1'
+  time:timestamp: '2022-11-29T00:16:52.015+01:00'
+  shift:timestamp: '2022-12-14T10:49:26.40+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: update departmental records
+  concept:endpoint: https-post://cpee.org/services/timeout-auto.php
+  id:id: a13
+  cpee:activity: a13
+  cpee:activity_uuid: df309b0937ce13336404f8f4ef1c74c7
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.1'
+  time:timestamp: '2022-11-29T00:16:52.072+01:00'
+---
+event:
+  concept:instance: 6939
+  concept:name: update departmental records
+  concept:endpoint: https-post://cpee.org/services/timeout-auto.php
+  id:id: a13
+  cpee:activity: a13
+  cpee:activity_uuid: df309b0937ce13336404f8f4ef1c74c7
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-29T00:16:52.087+01:00'
+  shift:timestamp: '2022-12-14T10:53:45.60+01:00'
+---
+event:
+  concept:instance: 6939
+  id:id: external
+  cpee:activity: external
+  cpee:instance: fbdb195a-6d1a-4ba8-9f1e-0726bebe717d
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: finished
+  time:timestamp: '2022-11-29T00:16:52.123+01:00'

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE TimeML SYSTEM "TimeML.dtd">
+<TimeML>
+<TIMEX3 tid="t1" type="SET" value="PTMO" quant="EVERY">Each morning</TIMEX3>, the files which have yet to be processed need to be checked, to make sure they are in order for the court hearing that day. If some files are missing, a search is initiated, otherwise the files can be physically tracked to the intended location. Once all the files are ready, these are handed to the Associate, and meantime the Judges Lawlist is distributed to the relevant people. Afterwards, the directions hearings are conducted.
+</TimeML>
+

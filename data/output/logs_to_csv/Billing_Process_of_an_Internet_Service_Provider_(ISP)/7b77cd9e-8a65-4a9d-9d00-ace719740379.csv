@@ -1,0 +1,25 @@
+concept:name,cpee:activity_uuid,concept:name,lifecycle:transition,shift:timestamp
+send invoice,cc232787147e26a9c86f42dc9eae4bde,send invoice,start,2023-02-01 07:30:00+01:00
+send invoice,cc232787147e26a9c86f42dc9eae4bde,send invoice,complete,2023-02-01 07:30:03+01:00
+customer pays,ffee8ecf48e5db8a9126dc45a0c24660,customer pays,start,2023-02-01 07:30:03+01:00
+wait 7 days,a95f7b992d16d7527fca47a3ec343ee7,wait 7 days,start,2023-02-01 07:30:03+01:00
+wait 7 days,a95f7b992d16d7527fca47a3ec343ee7,wait 7 days,complete,2023-02-08 07:30:03+01:00
+debit outstanding amount,c9653f3ba2d5ea42c0ad86b00140530a,debit outstanding amount,start,2023-02-08 07:30:03+01:00
+debit outstanding amount,c9653f3ba2d5ea42c0ad86b00140530a,debit outstanding amount,complete,2023-02-08 07:30:06+01:00
+wait 1 day,15c5614f07550b042b94069dbb6bd2ed,wait 1 day,start,2023-02-08 07:30:06+01:00
+wait 1 day,15c5614f07550b042b94069dbb6bd2ed,wait 1 day,complete,2023-02-09 07:30:06+01:00
+notify customer,24e889ffac91b74e10ecbb46616e7c5f,notify customer,start,2023-02-09 07:30:06+01:00
+notify customer,24e889ffac91b74e10ecbb46616e7c5f,notify customer,complete,2023-02-09 07:30:09+01:00
+wait 1 day,49de1698adf404c0eb92e0f59d8c6ac8,wait 1 day,start,2023-02-09 07:30:09+01:00
+wait 1 day,49de1698adf404c0eb92e0f59d8c6ac8,wait 1 day,complete,2023-02-10 07:30:09+01:00
+re-attempt debit outstanding amount,552b5e17dfbd3ff6679a6651d6e56521,re-attempt debit outstanding amount,start,2023-02-10 07:30:09+01:00
+re-attempt debit outstanding amount,552b5e17dfbd3ff6679a6651d6e56521,re-attempt debit outstanding amount,complete,2023-02-10 07:30:12+01:00
+wait 1 day,3e42fcceb6eca495735aa824e0275e77,wait 1 day,start,2023-02-10 07:30:12+01:00
+wait 1 day,3e42fcceb6eca495735aa824e0275e77,wait 1 day,complete,2023-02-11 07:30:12+01:00
+charge late fee,4997ee70d259fdfcd615a923969dcf02,charge late fee,start,2023-02-11 07:30:12+01:00
+charge late fee,4997ee70d259fdfcd615a923969dcf02,charge late fee,complete,2023-02-11 07:30:15+01:00
+wait 4 days,14b3503cc2b866cdf83c07f861076afc,wait 4 days,start,2023-02-11 07:30:15+01:00
+wait 4 days,14b3503cc2b866cdf83c07f861076afc,wait 4 days,complete,2023-02-15 07:30:15+01:00
+suspend service,87a9a98a7d45344e9bdcecde9b02cf94,suspend service,start,2023-02-15 07:30:15+01:00
+suspend service,87a9a98a7d45344e9bdcecde9b02cf94,suspend service,complete,2023-02-15 07:30:18+01:00
+customer pays,ffee8ecf48e5db8a9126dc45a0c24660,customer pays,complete,2023-02-08 12:13:43.800000+01:00

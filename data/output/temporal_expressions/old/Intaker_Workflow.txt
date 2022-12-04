@@ -1,0 +1,12 @@
+
+Process Description: Intaker_Workflow.txt
+Sentence: Halfway the week, at Wednesday, a staff meeting of the entire medical team takes place.
+Annotated Time: Wednesday
+Time Type: DATE
+Value: 2022-11-23
+
+Process Description: Intaker_Workflow.txt
+Sentence: For the staff meeting on Wednesday, they provide the team-leader with a list of these patients.
+Annotated Time: Wednesday
+Time Type: DATE
+Value: 2022-11-23

@@ -1,0 +1,34 @@
+process_description_name,original_sentence,annotated_time,time_type,value,quantity,frequency
+Mortgage_Offer,"if no answer is received after 2 weeks, the case details are updated prior to archive and cancellation.",2 weeks,DURATION,P2W,
+Supplier_Switch,"an additional constraint is that the customer can only withdraw from the offered contract within 7 days, after the 7th day the contract will be regarded as accepted and the process continues.",7 days,DURATION,P7D,
+Supplier_Switch,the confirmation message by the customer is therefore not absolutely necessary (as it will count as accepted after 7 days in any way) but it can speed up the switch process.,7 days,DURATION,P7D,
+Supplier_Switch,"on the switch-date, but no later than 10 days after power supply has begun, the grid operator transmits the power meter data to the customer service and the old supplier via messages containing a services consumption report.",10 days,DURATION,P10D,
+Quince_Harvesting,the quince harvesting process takes place in october and november.,october,DATE,2023-10,
+Quince_Harvesting,the quince harvesting process takes place in october and november.,november,DATE,2022-11,
+Quince_Harvesting,"every day, from 7am the manager checks that the plantation has not been affected by codling moth.",every day,SET,P1D,EVERY
+Quince_Harvesting,"every day, from 7am the manager checks that the plantation has not been affected by codling moth.",7am,TIME,XXXX-XX-XXT07:00,
+Quince_Harvesting,"the employees begin to pick the fruits at 8am, when the quinces have almost no dew.",8am,TIME,XXXX-XX-XXT08:00,
+Quince_Harvesting,"if the workers have not taken a break before 1pm, the manager reminds them that they should take a break soon.",1pm,TIME,XXXX-XX-XXT13:00,
+Quince_Harvesting,"7 hours after the employees started picking the fruits, the trucks come and the employees load them at most until 5pm.",7 hours,DURATION,PT7H,
+Quince_Harvesting,"7 hours after the employees started picking the fruits, the trucks come and the employees load them at most until 5pm.",5pm.,TIME,XXXX-XX-XXT17:00,
+Quince_Harvesting,"7 hours after the employees started picking the fruits, the trucks come and the employees load them at most until 5pm.",30 minutes,DURATION,PT30M,
+SLA_Violation,"resource provisioning has been on-hold and waiting for a restoration request but this must happen within 2 days after the status report was sent out, otherwise resource provisioning terminates the process.",2 days,DURATION,P2D,
+SLA_Violation,"i) a report is created for the customer which details the current service performance and the resolution of the problem, and ii) an sla violation rebate is reported to billing & collections who will adjust the billing.",current,DATE,PRESENT_REF,
+Billing_Process_of_an_Internet_Service_Provider_(ISP),the isp sends an invoice by email to the customer on the first working day of each month (day 1).,each month,SET,P1M,EACH
+Meeting_Related_Activities,committee members are advised a week before each meeting to read all related documents.,a week,DURATION,P1W,
+Setting_up_a_Callover,"in a small claims tribunal, callovers occur once a month, to set down the matter for the upcoming trials.",once a month,SET,P1M,,1
+Setting_up_a_Callover,"the process for setting up a callover starts three weeks prior to the callover day, with the preparation of the callover list containing information such as contact details of the involved parties and estimated hearing date.",three weeks,DURATION,P3W,
+Setting_up_a_Callover,"one week prior to the callover, the involved parties are contacted to determine if they are all ready to go to trial.",one week,DURATION,P1W,
+Claim_Handling_Process,the claimant is expected to return the questionnaire within five days.,five days,DURATION,P5D,
+Claim_Handling_Process,"if no response is received after five days, a reminder is sent to the claimant.",five days,DURATION,P5D,
+Claim_Handling_Process,"if after another five days there is still no response, another reminder is sent and so on until the completed questionnaire is received.",five days,DURATION,P5D,
+Management_of_Account_Defaulter,"all of this must be completed by 2:30 pm, if it is not, then an alert should be sent to the supervisor.",2:30 pm,TIME,XXXX-XX-XXT14:30,
+Management_of_Account_Defaulter,this must be completed by 4:00 pm otherwise a supervisor should be sent a message.,4:00 pm,TIME,XXXX-XX-XXT16:00,
+Inubit_AG_Tutorial,"the process starts periodically on the first of each month, when assembler ag places an order with the supplier in order to request more product parts.",each month,SET,P1M,EACH
+Intaker_Workflow,"halfway the week, at wednesday, a staff meeting of the entire medical team takes place.",wednesday,DATE,2022-11-30,
+Intaker_Workflow,"for the staff meeting on wednesday, they provide the team-leader with a list of these patients.",wednesday,DATE,2022-11-30,
+Town_Planning_Authority_scheduling_Meetings,"in november of each year, the coordination unit at the town planning authority drafts a schedule of meetings for the next calendar year and adds draft dates to all calendars.",november,DATE,2022-11,
+Town_Planning_Authority_scheduling_Meetings,"in november of each year, the coordination unit at the town planning authority drafts a schedule of meetings for the next calendar year and adds draft dates to all calendars.",each year,SET,P1Y,EACH
+Turbopixel,"if we are not contacted within 2 weeks, a sales representative is calling the customer.",2 weeks,DURATION,P2W,
+Steps_to_follow_after_receiving_Expense_Report,"if the request is not completed in 7 days, then the employee must receive an “approval in progress” email.",7 days,DURATION,P7D,
+Steps_to_follow_after_receiving_Expense_Report,"if the request is not finished within 30 days, then the process is stopped and the employee receives an email cancellation notice and must re‐submit the expense report.",30 days,DURATION,P30D,

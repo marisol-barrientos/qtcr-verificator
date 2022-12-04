@@ -1,0 +1,25 @@
+concept:name,cpee:activity_uuid,concept:name,lifecycle:transition,shift:timestamp
+send invoice,6d9c686cec7d469caf0d8e2c7f029c5d,send invoice,start,2026-06-01 07:30:00+02:00
+send invoice,6d9c686cec7d469caf0d8e2c7f029c5d,send invoice,complete,2026-06-01 07:30:03+02:00
+customer pays,9cbfee418236776a8b73cf23716028b3,customer pays,start,2026-06-01 07:30:03+02:00
+wait 7 days,717d4f3295f7aa13e82de5db0da5410c,wait 7 days,start,2026-06-01 07:30:03+02:00
+wait 7 days,717d4f3295f7aa13e82de5db0da5410c,wait 7 days,complete,2026-06-08 07:30:03+02:00
+debit outstanding amount,8cb7d9defcc6181d86bb17abcaf100bc,debit outstanding amount,start,2026-06-08 07:30:03+02:00
+debit outstanding amount,8cb7d9defcc6181d86bb17abcaf100bc,debit outstanding amount,complete,2026-06-08 07:30:06+02:00
+wait 1 day,81bdcecbbf271584f1e36a3e14e51f73,wait 1 day,start,2026-06-08 07:30:06+02:00
+wait 1 day,81bdcecbbf271584f1e36a3e14e51f73,wait 1 day,complete,2026-06-09 07:30:06+02:00
+notify customer,04c2faa26ae9c8962875d6806c672811,notify customer,start,2026-06-09 07:30:06+02:00
+notify customer,04c2faa26ae9c8962875d6806c672811,notify customer,complete,2026-06-09 07:30:09+02:00
+wait 1 day,878b20a9ab7294beb240c016f1edf5da,wait 1 day,start,2026-06-09 07:30:09+02:00
+wait 1 day,878b20a9ab7294beb240c016f1edf5da,wait 1 day,complete,2026-06-10 07:30:09+02:00
+re-attempt debit outstanding amount,4a4a1a465806deebe5be04616d7d0326,re-attempt debit outstanding amount,start,2026-06-10 07:30:09+02:00
+re-attempt debit outstanding amount,4a4a1a465806deebe5be04616d7d0326,re-attempt debit outstanding amount,complete,2026-06-10 07:30:12+02:00
+wait 1 day,ae6a5b1071e3fad3eed329f628315953,wait 1 day,start,2026-06-10 07:30:12+02:00
+wait 1 day,ae6a5b1071e3fad3eed329f628315953,wait 1 day,complete,2026-06-11 07:30:12+02:00
+charge late fee,da2cefbc3b7071e1d58f865c8e53dcc3,charge late fee,start,2026-06-11 07:30:12+02:00
+charge late fee,da2cefbc3b7071e1d58f865c8e53dcc3,charge late fee,complete,2026-06-11 07:30:15+02:00
+wait 4 days,e543596b7be9bea4896cbbc69c5d9d65,wait 4 days,start,2026-06-11 07:30:15+02:00
+customer pays,9cbfee418236776a8b73cf23716028b3,customer pays,complete,2026-06-06 18:28:07.790000+02:00
+wait 4 days,e543596b7be9bea4896cbbc69c5d9d65,wait 4 days,complete,2026-06-15 07:30:15+02:00
+suspend service,1a9f5a5cd0f43910e3f5fdf33e792def,suspend service,start,2026-06-15 07:30:15+02:00
+suspend service,1a9f5a5cd0f43910e3f5fdf33e792def,suspend service,complete,2026-06-15 07:30:18+02:00
