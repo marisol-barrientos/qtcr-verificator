@@ -4,16 +4,6 @@ import numpy as np
 from bert_score import BERTScorer
 from src.helpers import load_transformers, clean_text
 
-'''
-def remove_temporal_labels(text):
-    text = text.replace('wait 7 days','')
-    text = text.replace('wait 1 days', '')
-    text = text.replace('wait 4 days', '')
-    text = text.replace('wait one week or less', '')
-    text = text.replace('wait until 1 week before meeting', '')
-    return text.replace('wait 23 days', '')
-    '''
-
 def get_sentence_similarities(activities, sentence_with_time):
     load_transformers()
     sentence_with_time = clean_text(sentence_with_time)
