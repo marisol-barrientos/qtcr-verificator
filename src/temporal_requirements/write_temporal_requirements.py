@@ -2,7 +2,7 @@ import csv
 import datetime
 import os
 
-import helpers
+from src import helpers
 from src.temporal_requirements.temporal_requirements import get_temporal_requirements
 from src.enums import ProcessElementScope, Conditional, Signal, ReferenceTime, TimeType, ActivityType
 

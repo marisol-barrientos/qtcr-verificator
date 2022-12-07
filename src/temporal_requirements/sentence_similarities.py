@@ -1,7 +1,7 @@
 import numpy as np
 
 # It returns the similarity measured by F1
-from src.bert_score.bert_score import BERTScorer
+from bert_score import BERTScorer
 from src.helpers import load_transformers, clean_text
 
 '''
