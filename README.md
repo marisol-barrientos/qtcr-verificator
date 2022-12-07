@@ -1,1 +1,1 @@
-# Quantitative Temporal Compliance Requirements Verificator
+# QTCR Verificator
