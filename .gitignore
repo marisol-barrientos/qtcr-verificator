@@ -14,3 +14,6 @@ __pypackages__/
 
 # IDE
 .idea
+
+# Path to Heideltime
+./home/marisolbarrientosmoreno/Desktop/Summer_Semester/i17/qtcr-verificator/src/heideltime/heideltime-standalone
