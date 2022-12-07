@@ -1,1 +1,1 @@
-# Verification of Quantitative Temporal Compliance Requirements
+# Quantitative Temporal Compliance Requirements Verificator
