@@ -32,8 +32,8 @@ More information about how to install the wrapper can be found in this other [RE
 After having installed the [Heideltime Wrapper](https://github.services.devops.takamol.support/PhilipEHausner/python_heideltime "Heideltime Wrapper"), 
 the file present here: ['src/heideltime/heideltime-standalone/heideltime-standalone/de.unihd.dbs.heideltime.standalone.jar'](src/heideltime/heideltime-standalone/heideltime-standalone/de.unihd.dbs.heideltime.standalone.jar) 
 must be replaced with ['tmp/de.unihd.dbs.heideltime.standalone.jar'](tmp/de.unihd.dbs.heideltime.standalone.jar). 
-This new file contains an extension of the Heideltime rules. If someone desires to work with the rules given by default,
-it is not necessary to replace the file 'de.unihd.dbs.heideltime.standalone.jar'.
+This new file contains an extension of the Heideltime rules, which gives better results detecting Quantitative Temporal Compliance Requirements. 
+If someone desires to work with the rules given by default, it is not necessary to replace the file 'de.unihd.dbs.heideltime.standalone.jar'.
 
 
 
