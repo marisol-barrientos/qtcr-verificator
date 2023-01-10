@@ -15,7 +15,8 @@ pip3 install -r /path/to/requirements.txt
 ```
 
 
-For tagging temporal constraints it is used a [wrapped version](https://github.services.devops.takamol.support/PhilipEHausner/python_heideltime "wrapped version") of [Heideltime](https://github.com/HeidelTime/heideltime "Heideltime"). The next commands sum up its installation, please, execute them inside: ['src/heideltime/heideltime-standalone'](src/heideltime/heideltime-standalone).
+For tagging temporal constraints it is used a [wrapped version](https://github.services.devops.takamol.support/PhilipEHausner/python_heideltime "Python HeidelTime Wrapper") 
+of [Heideltime](https://github.com/HeidelTime/heideltime "Heideltime"). The next commands sum up its installation, please, execute them inside: ['src/heideltime/heideltime-standalone'](src/heideltime/heideltime-standalone "Link to 'heideltime-standalone' folder").
 
 ```
 chmod +x install_heideltime_standalone.sh
@@ -26,10 +27,13 @@ chmod +x install_heideltime_standalone.sh
 python3 -m pip install .
 ```
 
-More information about how to install it can be found in the [README file](/src/heideltime/README.md) of the 
-Python Wrapper.
+More information about how to install the wrapper can be found in this other [README file](/src/heideltime/README.md).
 
-After having installed the [Heideltime Wrapper](https://github.services.devops.takamol.support/PhilipEHausner/python_heideltime "Heideltime Wrapper"), the file present here: ['src/heideltime/heideltime-standalone/heideltime-standalone/de.unihd.dbs.heideltime.standalone.jar'](src/heideltime/heideltime-standalone/heideltime-standalone/de.unihd.dbs.heideltime.standalone.jar) must be replaced with ['tmp/de.unihd.dbs.heideltime.standalone.jar'](tmp/de.unihd.dbs.heideltime.standalone.jar)
+After having installed the [Heideltime Wrapper](https://github.services.devops.takamol.support/PhilipEHausner/python_heideltime "Heideltime Wrapper"), 
+the file present here: ['src/heideltime/heideltime-standalone/heideltime-standalone/de.unihd.dbs.heideltime.standalone.jar'](src/heideltime/heideltime-standalone/heideltime-standalone/de.unihd.dbs.heideltime.standalone.jar) 
+must be replaced with ['tmp/de.unihd.dbs.heideltime.standalone.jar'](tmp/de.unihd.dbs.heideltime.standalone.jar). 
+This new file contains an extension of the Heideltime rules. If someone desires to work with the rules given by default,
+it is not necessary to replace the file 'de.unihd.dbs.heideltime.standalone.jar'.
 
 
 
