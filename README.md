@@ -36,12 +36,11 @@ must be replaced with ['tmp/de.unihd.dbs.heideltime.standalone.jar'](tmp/de.unih
 This new file contains an extension of the Heideltime rules, which gives better results detecting time present in Quantitative Temporal Compliance Requirements. 
 If someone desires to work with the rules given by default, it is not necessary to replace the file 'de.unihd.dbs.heideltime.standalone.jar'.
 
+To get the input data it is necessary to download and uncompress the folder present here:
+[synthetic logs](https://lehre.bpm.in.tum.de/~ge97woq/data.zip "Synthetic Logs"). It must be placed under 'qtcr-verificator'
+main directory I.e. in the same path level as 'src'.
 
-
-
-TODO: Get from compress folder
-TODO: Add info about tests
 
 ## Usage
 
-
+TODO: Add info about tests
