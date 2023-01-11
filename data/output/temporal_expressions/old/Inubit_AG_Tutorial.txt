@@ -1,6 +1,0 @@
-
-Process Description: Inubit_AG_Tutorial.txt
-Sentence: The process starts periodically on the first of each month, when Assembler AG places an order with the supplier in order to request more product parts.
-Annotated Time: on the first of each month
-Time Type: SET
-Value: XXXX-XXX-01
