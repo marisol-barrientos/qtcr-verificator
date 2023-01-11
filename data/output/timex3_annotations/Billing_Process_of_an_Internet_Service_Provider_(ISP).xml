@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<!DOCTYPE TimeML SYSTEM "TimeML.dtd">
-<TimeML>
-The ISP sends an invoice by email to the customer <TIMEX3 tid="t2" type="SET" value="XXXX-XXX-WORK">on the first working day of each month</TIMEX3> (<TIMEX3 tid="t1" type="DATE" value="2022-11-01">Day 1</TIMEX3>). On <TIMEX3 tid="t4" type="DATE" value="2022-11-08">Day 8</TIMEX3>, the customer has the full outstanding amount automatically debited from their bank account. If an automatic transaction fails for any reason, the customer is notified on <TIMEX3 tid="t5" type="DATE" value="2022-11-09">Day 9</TIMEX3>. On <TIMEX3 tid="t6" type="DATE" value="2022-11-10">Day 10</TIMEX3>, the transaction that failed on <TIMEX3 tid="t7" type="DATE" value="2022-11-08">Day 8</TIMEX3> is re-attempted. If it fails again, on <TIMEX3 tid="t8" type="DATE" value="2022-11-11">Day 11</TIMEX3> a late fee is charged to the customer's bank account. At this stage, the automatic payment is no longer attempted. On <TIMEX3 tid="t9" type="DATE" value="2022-11-15">Day 15</TIMEX3>, the Internet service is suspended until payment is received.
-</TimeML>
-

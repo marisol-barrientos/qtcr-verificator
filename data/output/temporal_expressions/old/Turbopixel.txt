@@ -1,6 +1,0 @@
-
-Process Description: Turbopixel.txt
-Sentence: If we are not contacted within 2 weeks, a sales representative is calling the customer.
-Annotated Time: 2 weeks
-Time Type: DURATION
-Value: P2W

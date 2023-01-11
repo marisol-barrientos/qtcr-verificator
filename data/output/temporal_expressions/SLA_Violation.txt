@@ -1,6 +1,0 @@
-
-Process Description: SLA_Violation.txt
-Sentence: resource provisioning has been on-hold and waiting for a restoration request but this must happen within 2 days after the status report was sent out, otherwise resource provisioning terminates the process.
-Annotated Time: 2 days
-Value: P2D
-Time Type: DURATION

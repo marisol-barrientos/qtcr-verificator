@@ -1,5 +1,6 @@
 # QTCR Verificator
 
+## Set up
 
 It is recommended using Python version 3.10.
 
@@ -41,5 +42,6 @@ If someone desires to work with the rules given by default, it is not necessary 
 TODO: Get from compress folder
 TODO: Add info about tests
 
+## Usage
 
 

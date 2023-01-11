@@ -1,6 +1,0 @@
-
-Process Description: Meeting_Related_Activities.txt
-Sentence: committee members are advised a week before each meeting to read all related documents.
-Annotated Time: a week
-Value: P1W
-Time Type: DURATION

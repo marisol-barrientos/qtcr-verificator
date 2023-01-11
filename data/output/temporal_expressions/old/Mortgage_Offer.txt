@@ -1,6 +1,0 @@
-
-Process Description: Mortgage_Offer.txt
-Sentence: If no answer is received after 2 weeks, the case details are updated prior to archive and cancellation.
-Annotated Time: 2 weeks
-Time Type: DURATION
-Value: P2W

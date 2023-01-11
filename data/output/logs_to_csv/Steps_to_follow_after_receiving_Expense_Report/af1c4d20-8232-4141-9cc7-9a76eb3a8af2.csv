@@ -1,8 +1,0 @@
-concept:name,cpee:activity_uuid,concept:name,lifecycle:transition,shift:timestamp
-receive expense report,eb8298b7e338e615b86a044d7350d72f,receive expense report,start,2022-11-24 07:30:00+01:00
-receive expense report,eb8298b7e338e615b86a044d7350d72f,receive expense report,complete,2022-11-24 07:30:03+01:00
-wait 7 days,cce1f58beeeebe2c1259a0d62935b4bb,wait 7 days,start,2022-11-24 07:30:03+01:00
-approve expense report automatically,03e0a8018717e50c6ddc3dc8429f069b,approve expense report automatically,start,2022-11-24 07:30:03+01:00
-approve expense report automatically,03e0a8018717e50c6ddc3dc8429f069b,approve expense report automatically,complete,2022-11-24 07:30:06+01:00
-send reimbursement to deposit bank account,81cc053e9e4cf5ad4f916cf475e35816,send reimbursement to deposit bank account,start,2022-11-24 07:30:06+01:00
-send reimbursement to deposit bank account,81cc053e9e4cf5ad4f916cf475e35816,send reimbursement to deposit bank account,complete,2022-11-24 18:10:54+01:00

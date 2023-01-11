@@ -1,7 +1,0 @@
-The ISP sends an invoice by email to the customer on the first working day of each month
-(Day 1). On Day 8, the customer has the full outstanding amount automatically debited
-from their bank account. If an automatic transaction fails for any reason, the customer
-is notified on Day 9. On Day 10, the transaction that failed on Day 8 is re-attempted. If
-it fails again, on Day 11 a late fee is charged to the customer's bank account. At this
-stage, the automatic payment is no longer attempted. On Day 15, the Internet service is
-suspended until payment is received.
