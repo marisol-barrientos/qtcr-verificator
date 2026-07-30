@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE TimeML SYSTEM "TimeML.dtd">
+<TimeML>
+In a small claims tribunal, callovers occur <TIMEX3 tid="t1" type="SET" value="P1M" freq="1">once a month</TIMEX3>, to set down the matter for the upcoming trials. The process for setting up a callover starts <TIMEX3 tid="t4" type="DURATION" value="P3W">three weeks</TIMEX3> prior to the callover day, with the preparation of the callover list containing information such as contact details of the involved parties and estimated hearing date. <TIMEX3 tid="t5" type="DURATION" value="P1W">One week</TIMEX3> prior to the callover, the involved parties are contacted to determine if they are all ready to go to trial. If this is the case, the callover is set, otherwise it is deferred to the next available slot. Finally, on the callover day, the callover material is prepared and the callover is held.
+</TimeML>
+

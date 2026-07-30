@@ -1,0 +1,10 @@
+process_description_name,original_sentence,annotated_time,
+Billing_Process_of_an_Internet_Service_Provider_(ISP),"On Day 14, the Internet service is suspended until payment is received.",Day 14,CYCLE
+Claim_Handling_Process,"If no response is received after five days, a reminder is sent to the claimant.",five days,LAG – VALIDITY PERIOD
+Conduct_Directions_Hearing,"Each morning, the files which have yet to be processed need to be checked, to make sure they are in order for the court hearing that day.",Each morning,RESTRICTED ELEMENT – BUT ALSO PERIODICITY
+Intaker_Workflow,"Halfway the week, at Wednesday, a staff meeting of the entire medical team takes place.",Wednesday,FIXED DATA ELEMENT
+Inubit_AG_Tutorial,"The process starts periodically on the first of each month, when Assembler AG places an order with the supplier in order to request more product parts.",on the first of each month,PERIODICITY
+Meeting_Related_Activities,Committee Members are advised a week before each meeting to read all related documents.,a week,RELATIVE DATE
+Quince_Harvest,"Every day, from 7am the manager checks that the plantation has not been affected by codling moth, if it is affected that day's production is interrupted.",Every day,VALIDITY PERIOD
+Setting_up_a_Callover,"In a small claims tribunal, callovers occur once a month, to set down the matter for the upcoming trials.",once a month,TIME BASED RESTRICTION
+Steps_to_follow_after_receiving_Expense_Report,"If the request is not finished within 30 days, then the process is stopped and the employee.",30 days,DURATION 

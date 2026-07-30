@@ -1,0 +1,54 @@
+
+Process Description: Billing_Process_of_an_Internet_Service_Provider_(ISP).txt
+Sentence: The ISP sends an invoice by email to the customer on the first working day of each month (Day 1).
+Annotated Time: on the first working day of each month
+Time Type: SET
+Value: XXXX-XXX-WORK
+
+Process Description: Billing_Process_of_an_Internet_Service_Provider_(ISP).txt
+Sentence: The ISP sends an invoice by email to the customer on the first working day of each month (Day 1).
+Annotated Time: Day 1
+Time Type: DATE
+Value: 2022-11-01
+
+Process Description: Billing_Process_of_an_Internet_Service_Provider_(ISP).txt
+Sentence: On Day 7, the customer has the full outstanding amount automatically debited from their bank account.
+Annotated Time: Day 7
+Time Type: DATE
+Value: 2022-11-07
+
+Process Description: Billing_Process_of_an_Internet_Service_Provider_(ISP).txt
+Sentence: If an automatic transaction fails for any reason, the customer is notified on Day 8.
+Annotated Time: Day 8
+Time Type: DATE
+Value: 2022-11-08
+
+Process Description: Billing_Process_of_an_Internet_Service_Provider_(ISP).txt
+Sentence: On Day 9, the transaction that failed on Day 7 is re-attempted.
+Annotated Time: Day 9
+Time Type: DATE
+Value: 2022-11-09
+
+Process Description: Billing_Process_of_an_Internet_Service_Provider_(ISP).txt
+Sentence: On Day 9, the transaction that failed on Day 7 is re-attempted.
+Annotated Time: Day 7
+Time Type: DATE
+Value: 2022-11-07
+
+Process Description: Billing_Process_of_an_Internet_Service_Provider_(ISP).txt
+Sentence: If it fails again, on Day 10 a late fee is charged to the customer's bank account.
+Annotated Time: Day 10
+Time Type: DATE
+Value: 2022-11-10
+
+Process Description: Billing_Process_of_an_Internet_Service_Provider_(ISP).txt
+Sentence: On Day 14, the Internet service is suspended until payment is received.
+Annotated Time: Day 14
+Time Type: DATE
+Value: 2022-11-14
+
+Process Description: Billing_Process_of_an_Internet_Service_Provider_(ISP).txt
+Sentence: If on Day 30 the payment is still outstanding, the account is closed and a disconnection fee is applied.
+Annotated Time: Day 30
+Time Type: DATE
+Value: 2022-11-30

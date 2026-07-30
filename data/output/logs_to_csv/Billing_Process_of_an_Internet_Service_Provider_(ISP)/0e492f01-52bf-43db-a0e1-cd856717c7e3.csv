@@ -1,0 +1,25 @@
+concept:name,cpee:activity_uuid,concept:name,lifecycle:transition,shift:timestamp
+send invoice,3210c88b4439035b91d269274acd5d1e,send invoice,start,2022-11-01 07:30:00+01:00
+send invoice,3210c88b4439035b91d269274acd5d1e,send invoice,complete,2022-11-01 07:30:03+01:00
+wait 7 days,5f7b36d7b6e649ac378768deabc6aeba,wait 7 days,start,2022-11-01 07:30:03+01:00
+customer pays,1993297f76a04f630ad76c406536721b,customer pays,start,2022-11-01 07:30:03+01:00
+wait 7 days,5f7b36d7b6e649ac378768deabc6aeba,wait 7 days,complete,2022-11-08 07:30:03+01:00
+debit outstanding amount,c2c29e9a19c3b03261d9e752023a3f88,debit outstanding amount,start,2022-11-08 07:30:03+01:00
+debit outstanding amount,c2c29e9a19c3b03261d9e752023a3f88,debit outstanding amount,complete,2022-11-08 07:30:06+01:00
+wait 1 day,b83480ec1c66cff5dc0e777610e7aef1,wait 1 day,start,2022-11-08 07:30:06+01:00
+wait 1 day,b83480ec1c66cff5dc0e777610e7aef1,wait 1 day,complete,2022-11-09 07:30:06+01:00
+notify customer,6d2878a3dcbcf8c35827a10d19df0210,notify customer,start,2022-11-09 07:30:06+01:00
+notify customer,6d2878a3dcbcf8c35827a10d19df0210,notify customer,complete,2022-11-09 07:30:09+01:00
+wait 1 day,a1fc4c3f792d288b8aada4a15e4f0d31,wait 1 day,start,2022-11-09 07:30:09+01:00
+wait 1 day,a1fc4c3f792d288b8aada4a15e4f0d31,wait 1 day,complete,2022-11-10 07:30:09+01:00
+re-attempt debit outstanding amount,cb9dc2a294b26d94766eaa92901e6b5b,re-attempt debit outstanding amount,start,2022-11-10 07:30:09+01:00
+re-attempt debit outstanding amount,cb9dc2a294b26d94766eaa92901e6b5b,re-attempt debit outstanding amount,complete,2022-11-10 07:30:12+01:00
+wait 1 day,9626760a8abfee885863fb59b86e7443,wait 1 day,start,2022-11-10 07:30:12+01:00
+customer pays,1993297f76a04f630ad76c406536721b,customer pays,complete,2022-11-04 18:23:48.600000+01:00
+wait 1 day,9626760a8abfee885863fb59b86e7443,wait 1 day,complete,2022-11-11 07:30:12+01:00
+charge late fee,6654f37a3f186376ccdf908c95460216,charge late fee,start,2022-11-11 07:30:12+01:00
+charge late fee,6654f37a3f186376ccdf908c95460216,charge late fee,complete,2022-11-11 07:30:15+01:00
+wait 4 days,7a0973311eab59adca09d7e0ee917b85,wait 4 days,start,2022-11-11 07:30:15+01:00
+wait 4 days,7a0973311eab59adca09d7e0ee917b85,wait 4 days,complete,2022-11-15 07:30:15+01:00
+suspend service,29f759a77b4df4c53c6020f6c09b7e4c,suspend service,start,2022-11-15 07:30:15+01:00
+suspend service,29f759a77b4df4c53c6020f6c09b7e4c,suspend service,complete,2022-11-15 07:30:18+01:00

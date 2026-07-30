@@ -1,0 +1,16 @@
+
+Process Description: Claim_Handling_Process.txt
+Sentence: the claimant is expected to return the questionnaire within five days.
+Annotated Time: five days
+Value: P5D
+Time Type: DURATION
+Process Description: Claim_Handling_Process.txt
+Sentence: if no response is received after five days, a reminder is sent to the claimant.
+Annotated Time: five days
+Value: P5D
+Time Type: DURATION
+Process Description: Claim_Handling_Process.txt
+Sentence: if after another five days there is still no response, another reminder is sent and so on until the completed questionnaire is received.
+Annotated Time: five days
+Value: P5D
+Time Type: DURATION

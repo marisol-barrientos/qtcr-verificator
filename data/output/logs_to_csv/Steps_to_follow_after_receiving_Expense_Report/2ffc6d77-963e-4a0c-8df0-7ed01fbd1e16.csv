@@ -1,0 +1,14 @@
+concept:name,cpee:activity_uuid,concept:name,lifecycle:transition,shift:timestamp
+receive expense report,72cf8198d95daa1dc14db27ee695fe3e,receive expense report,start,2022-11-03 07:30:00+01:00
+receive expense report,72cf8198d95daa1dc14db27ee695fe3e,receive expense report,complete,2022-11-03 07:30:03+01:00
+supervisor review,4c374a46bb5c2196782ae4b1e2fa2e97,supervisor review,start,2022-11-03 07:30:03+01:00
+wait 7 days,774391adc5766e7439a415def16e1330,wait 7 days,start,2022-11-03 07:30:03+01:00
+wait 7 days,774391adc5766e7439a415def16e1330,wait 7 days,complete,2022-11-10 07:30:03+01:00
+"send ""approval in progress"" email",d9d6b50ffd648e1f9a8170f81997111d,"send ""approval in progress"" email",start,2022-11-10 07:30:03+01:00
+"send ""approval in progress"" email",d9d6b50ffd648e1f9a8170f81997111d,"send ""approval in progress"" email",complete,2022-11-10 07:30:06+01:00
+wait 23 days,83ce8473bf7e52229dd1ec38b9da0ad3,wait 23 days,start,2022-11-10 07:30:06+01:00
+wait 23 days,83ce8473bf7e52229dd1ec38b9da0ad3,wait 23 days,complete,2022-11-17 07:30:06+01:00
+send cancellation notice,eedc86001a466db61690c25346b8a36f,send cancellation notice,start,2022-11-17 07:30:06+01:00
+send cancellation notice,eedc86001a466db61690c25346b8a36f,send cancellation notice,complete,2022-11-17 07:30:09+01:00
+advice employee to re-submit the expense report,bff57660298a42c584e5fcaa804afbad,advice employee to re-submit the expense report,start,2022-11-17 07:30:09+01:00
+advice employee to re-submit the expense report,bff57660298a42c584e5fcaa804afbad,advice employee to re-submit the expense report,complete,2022-11-17 07:30:12+01:00

@@ -1,0 +1,1746 @@
+---
+log:
+  namespaces:
+    stream: https://cpee.org/datastream/
+    ssn: http://www.w3.org/ns/ssn/
+    sosa: http://www.w3.org/ns/sosa/
+  xes:
+    creator: cpee.org
+    features: nested-attributes
+  extension:
+    time: http://www.xes-standard.org/time.xesext
+    concept: http://www.xes-standard.org/concept.xesext
+    id: http://www.xes-standard.org/identity.xesext
+    lifecycle: http://www.xes-standard.org/lifecycle.xesext
+    cpee: http://cpee.org/cpee.xesext
+    stream: https://cpee.org/datastream/datastream.xesext
+    shift: https://cpee.org/time-shifting/time-shifting.xesext
+  global:
+    trace:
+      concept:name: __INVALID__
+      cpee:name: __INVALID__
+    event:
+      concept:instance: -1
+      concept:name: __INVALID__
+      concept:endpoint: ''
+      id:id: ''
+      cpee:uuid: ''
+      lifecycle:transition: complete
+      cpee:lifecycle:transition: activity/calling
+      time:timestamp: ''
+  trace:
+    concept:name: 6896
+    cpee:name: QuincesGalore
+    cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+---
+event:
+  concept:instance: 6896
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: ready
+  time:timestamp: '2022-11-28T23:14:49.570+01:00'
+---
+event:
+  concept:instance: 6896
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: basedate
+    value: '2022-12-19'
+  time:timestamp: '2022-11-28T23:14:49.586+01:00'
+---
+event:
+  concept:instance: 6896
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: endpoints/change
+  data:
+  - name: timeout
+    value: https-post://cpee.org/services/timeout.php
+  - name: user
+    value: https-post://cpee.org/services/timeout-user.php
+  - name: auto
+    value: https-post://cpee.org/services/timeout-auto.php
+  - name: receive
+    value: https-post://cpee.org/services/timeout-receive.php
+  - name: send
+    value: https-post://cpee.org/services/timeout-send.php
+  - name: subprocess
+    value: https-post://cpee.org/services/timeout-subprocess.php
+  time:timestamp: '2022-11-28T23:14:49.596+01:00'
+---
+event:
+  concept:instance: 6896
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: attributes/change
+  data:
+  - name: theme
+    value: packed
+  - name: info
+    value: QuincesGalore
+  - name: creator
+    value: Christine Ashcreek
+  - name: author
+    value: Christine Ashcreek
+  - name: modeltype
+    value: CPEE
+  - name: guarded
+    value: none
+  - name: guarded_id
+    value: ''
+  - name: model_uuid
+    value: 1fc43528-3e4a-40ee-8503-c0ed7e5d883c
+  - name: model_version
+    value: ''
+  - name: design_dir
+    value: Logs_TIE.dir
+  - name: design_stage
+    value: development
+  time:timestamp: '2022-11-28T23:14:49.607+01:00'
+---
+event:
+  concept:instance: 6896
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: description/change
+  cpee:description: |
+    <?xml version="1.0"?>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <_shifting>
+        <_shifting_factor>1 hour</_shifting_factor>
+        <_shifting_start>!data.basedate + ", 7:30"</_shifting_start>
+        <_shifting_modifier>!rand(0.15..0.25)</_shifting_modifier>
+      </_shifting>
+      <_context_data_analysis>
+        <probes/>
+        <ips/>
+      </_context_data_analysis>
+      <call id="a1" endpoint="user">
+        <parameters>
+          <label>Check for Codling Moth</label>
+          <arguments>
+            <timeout>!rand(0.25..0.5)</timeout>
+          </arguments>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.moths = false
+    data.break = false
+    data.finished = false</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+            <_shifting_expression/>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <choose mode="exclusive">
+        <alternative condition="data.moths == false">
+          <_probability>
+            <_probability_min/>
+            <_probability_max/>
+            <_probability_avg/>
+          </_probability>
+          <parallel wait="-1" cancel="last">
+            <parallel_branch pass="" local="">
+              <call id="a5" endpoint="timeout">
+                <parameters>
+                  <label>Start Picking</label>
+                  <arguments>
+                    <timeout>!rand(0..0.5)</timeout>
+                  </arguments>
+                </parameters>
+                <code>
+                  <prepare/>
+                  <finalize output="result">data.start = Time.now.to_f</finalize>
+                  <update output="result"/>
+                  <rescue output="result"/>
+                </code>
+                <annotations>
+                  <_timing>
+                    <_timing_weight/>
+                    <_timing_avg/>
+                    <explanations/>
+                  </_timing>
+                  <_shifting>
+                    <_shifting_type>Ends</_shifting_type>
+                    <_shifting_expression>!"08:" + rand(0..15).to_s</_shifting_expression>
+                  </_shifting>
+                  <_context_data_analysis>
+                    <probes/>
+                    <ips/>
+                  </_context_data_analysis>
+                  <report>
+                    <url/>
+                  </report>
+                  <_notes>
+                    <_notes_general/>
+                  </_notes>
+                </annotations>
+                <documentation>
+                  <input/>
+                  <output/>
+                  <implementation>
+                    <description/>
+                  </implementation>
+                  <code>
+                    <description/>
+                  </code>
+                </documentation>
+              </call>
+              <call id="a2" endpoint="user">
+                <parameters>
+                  <label>Picking </label>
+                  <arguments>
+                    <timeout>!5 + rand(-0.5..0.5)</timeout>
+                  </arguments>
+                </parameters>
+                <code>
+                  <prepare/>
+                  <finalize output="result">data.break = true
+    data.hours = Time.now.to_f - data.start
+    data.picked = rand(200..500)</finalize>
+                  <update output="result"/>
+                  <rescue output="result"/>
+                </code>
+                <annotations>
+                  <_timing>
+                    <_timing_weight/>
+                    <_timing_avg/>
+                    <explanations/>
+                  </_timing>
+                  <_shifting>
+                    <_shifting_type>Duration</_shifting_type>
+                  </_shifting>
+                  <_context_data_analysis>
+                    <probes/>
+                    <ips/>
+                  </_context_data_analysis>
+                  <report>
+                    <url/>
+                  </report>
+                  <_notes>
+                    <_notes_general/>
+                  </_notes>
+                </annotations>
+                <documentation>
+                  <input/>
+                  <output/>
+                  <implementation>
+                    <description/>
+                  </implementation>
+                  <code>
+                    <description/>
+                  </code>
+                </documentation>
+              </call>
+              <call id="a3" endpoint="user">
+                <parameters>
+                  <label>Break</label>
+                  <arguments>
+                    <timeout>0.5</timeout>
+                  </arguments>
+                </parameters>
+                <code>
+                  <prepare/>
+                  <finalize output="result">data.start = Time.now.to_f</finalize>
+                  <update output="result"/>
+                  <rescue output="result"/>
+                </code>
+                <annotations>
+                  <_timing>
+                    <_timing_weight/>
+                    <_timing_avg/>
+                    <explanations/>
+                  </_timing>
+                  <_shifting>
+                    <_shifting_type>Duration</_shifting_type>
+                    <_shifting_expression/>
+                  </_shifting>
+                  <_context_data_analysis>
+                    <probes/>
+                    <ips/>
+                  </_context_data_analysis>
+                  <report>
+                    <url/>
+                  </report>
+                  <_notes>
+                    <_notes_general/>
+                  </_notes>
+                </annotations>
+                <documentation>
+                  <input/>
+                  <output/>
+                  <implementation>
+                    <description/>
+                  </implementation>
+                  <code>
+                    <description/>
+                  </code>
+                </documentation>
+              </call>
+              <call id="a4" endpoint="user">
+                <parameters>
+                  <label>Picking</label>
+                  <arguments>
+                    <timeout>!4 + rand(-0.5..0.5)</timeout>
+                  </arguments>
+                </parameters>
+                <code>
+                  <prepare/>
+                  <finalize output="result">data.finished = true
+    data.hours += Time.now.to_f - data.start
+    data.picked += rand(100..200)</finalize>
+                  <update output="result"/>
+                  <rescue output="result"/>
+                </code>
+                <annotations>
+                  <_timing>
+                    <_timing_weight/>
+                    <_timing_avg/>
+                    <explanations/>
+                  </_timing>
+                  <_shifting>
+                    <_shifting_type>Duration</_shifting_type>
+                  </_shifting>
+                  <_context_data_analysis>
+                    <probes/>
+                    <ips/>
+                  </_context_data_analysis>
+                  <report>
+                    <url/>
+                  </report>
+                  <_notes>
+                    <_notes_general/>
+                  </_notes>
+                </annotations>
+                <documentation>
+                  <input/>
+                  <output/>
+                  <implementation>
+                    <description/>
+                  </implementation>
+                  <code>
+                    <description/>
+                  </code>
+                </documentation>
+              </call>
+            </parallel_branch>
+            <parallel_branch pass="" local="">
+              <call id="a6" endpoint="timeout">
+                <parameters>
+                  <label>Warn of Break (1pm)</label>
+                  <arguments>
+                    <timeout>6</timeout>
+                  </arguments>
+                </parameters>
+                <annotations>
+                  <_timing>
+                    <_timing_weight/>
+                    <_timing_avg/>
+                    <explanations/>
+                  </_timing>
+                  <_shifting>
+                    <_shifting_type>Ends</_shifting_type>
+                    <_shifting_expression>1pm</_shifting_expression>
+                  </_shifting>
+                  <_context_data_analysis>
+                    <probes/>
+                    <ips/>
+                  </_context_data_analysis>
+                  <report>
+                    <url/>
+                  </report>
+                  <_notes>
+                    <_notes_general/>
+                  </_notes>
+                </annotations>
+                <documentation>
+                  <input/>
+                  <output/>
+                  <implementation>
+                    <description/>
+                  </implementation>
+                </documentation>
+              </call>
+              <choose mode="exclusive">
+                <alternative condition="data.break == false">
+                  <_probability>
+                    <_probability_min/>
+                    <_probability_max/>
+                    <_probability_avg/>
+                  </_probability>
+                  <call id="a7" endpoint="user">
+                    <parameters>
+                      <label>Remind Workers of Break</label>
+                      <arguments>
+                        <timeout>0.1</timeout>
+                      </arguments>
+                    </parameters>
+                    <annotations>
+                      <_timing>
+                        <_timing_weight/>
+                        <_timing_avg/>
+                        <explanations/>
+                      </_timing>
+                      <_shifting>
+                        <_shifting_type>Duration</_shifting_type>
+                        <_shifting_expression/>
+                      </_shifting>
+                      <_context_data_analysis>
+                        <probes/>
+                        <ips/>
+                      </_context_data_analysis>
+                      <report>
+                        <url/>
+                      </report>
+                      <_notes>
+                        <_notes_general/>
+                      </_notes>
+                    </annotations>
+                    <documentation>
+                      <input/>
+                      <output/>
+                      <implementation>
+                        <description/>
+                      </implementation>
+                    </documentation>
+                  </call>
+                </alternative>
+                <otherwise/>
+              </choose>
+            </parallel_branch>
+            <parallel_branch>
+              <call id="a8" endpoint="timeout">
+                <parameters>
+                  <label>Trucks Arrive (3pm)</label>
+                  <arguments>
+                    <timeout>7</timeout>
+                  </arguments>
+                </parameters>
+                <code>
+                  <prepare/>
+                  <finalize output="result"/>
+                  <update output="result"/>
+                  <rescue output="result"/>
+                </code>
+                <annotations>
+                  <_timing>
+                    <_timing_weight/>
+                    <_timing_avg/>
+                    <explanations/>
+                  </_timing>
+                  <_shifting>
+                    <_shifting_type>Ends</_shifting_type>
+                    <_shifting_expression>!"15:" + rand(0..15).to_s</_shifting_expression>
+                  </_shifting>
+                  <_context_data_analysis>
+                    <probes/>
+                    <ips/>
+                  </_context_data_analysis>
+                  <report>
+                    <url/>
+                  </report>
+                  <_notes>
+                    <_notes_general/>
+                  </_notes>
+                </annotations>
+                <documentation>
+                  <input/>
+                  <output/>
+                  <implementation>
+                    <description/>
+                  </implementation>
+                  <code>
+                    <description/>
+                  </code>
+                </documentation>
+              </call>
+              <loop mode="post_test" condition="!data.finished">
+                <call id="a9" endpoint="user">
+                  <parameters>
+                    <label>Load Trucks</label>
+                    <arguments>
+                      <timeout>0.30</timeout>
+                    </arguments>
+                  </parameters>
+                  <annotations>
+                    <_timing>
+                      <_timing_weight/>
+                      <_timing_avg/>
+                      <explanations/>
+                    </_timing>
+                    <_shifting>
+                      <_shifting_type>Duration</_shifting_type>
+                      <_shifting_expression/>
+                    </_shifting>
+                    <_context_data_analysis>
+                      <probes/>
+                      <ips/>
+                    </_context_data_analysis>
+                    <report>
+                      <url/>
+                    </report>
+                    <_notes>
+                      <_notes_general/>
+                    </_notes>
+                  </annotations>
+                  <documentation>
+                    <input/>
+                    <output/>
+                    <implementation>
+                      <description/>
+                    </implementation>
+                  </documentation>
+                </call>
+                <_probability>
+                  <_probability_min/>
+                  <_probability_max/>
+                  <_probability_avg/>
+                </_probability>
+              </loop>
+            </parallel_branch>
+          </parallel>
+        </alternative>
+        <otherwise/>
+      </choose>
+      <call id="a12" endpoint="timeout">
+        <parameters>
+          <label>Start Spoiled Fruit Data Collection</label>
+          <arguments>
+            <timeout>!rand(0..0.6)</timeout>
+          </arguments>
+        </parameters>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Ends</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+        </documentation>
+      </call>
+      <call id="a11" endpoint="user">
+        <parameters>
+          <label>Collect Spoiled Fruit Data</label>
+          <arguments>
+            <timeout>!rand(0.25..0.5)</timeout>
+          </arguments>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.spoiled = rand(0..20)</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <call id="a10" endpoint="send">
+        <parameters>
+          <label>Send Recorded Kilos and Hours</label>
+          <arguments>
+            <timeout>0.1</timeout>
+            <ignore>
+              <hours>!data.hours</hours>
+              <amount>!data.picked</amount>
+              <spoiled>!data.spoiled</spoiled>
+            </ignore>
+          </arguments>
+        </parameters>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+        </documentation>
+      </call>
+    </description>
+  time:timestamp: '2022-11-28T23:14:49.923+01:00'
+---
+event:
+  concept:instance: 6896
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: running
+  time:timestamp: '2022-11-28T23:14:50.810+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Check for Codling Moth
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a1
+  cpee:activity: a1
+  cpee:activity_uuid: 2f5458a4d26a5bd1124f89dfa0b2f717
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: 0.3261981153658622
+  time:timestamp: '2022-11-28T23:14:50.849+01:00'
+  shift:timestamp: '2022-12-19T07:39:51.46+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Check for Codling Moth
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a1
+  cpee:activity: a1
+  cpee:activity_uuid: 2f5458a4d26a5bd1124f89dfa0b2f717
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.3261981153658622'
+  time:timestamp: '2022-11-28T23:14:51.141+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Check for Codling Moth
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a1
+  cpee:activity: a1
+  cpee:activity_uuid: 2f5458a4d26a5bd1124f89dfa0b2f717
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: moths
+    value: false
+  - name: break
+    value: false
+  - name: finished
+    value: false
+  time:timestamp: '2022-11-28T23:14:51.159+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Check for Codling Moth
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a1
+  cpee:activity: a1
+  cpee:activity_uuid: 2f5458a4d26a5bd1124f89dfa0b2f717
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:14:51.174+01:00'
+  shift:timestamp: '2022-12-19T07:59:21.46+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Start Picking
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a5
+  cpee:activity: a5
+  cpee:activity_uuid: 3c0f5a80b501919db33bb69a76cf60b4
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: 0.21157938917530772
+  time:timestamp: '2022-11-28T23:14:51.207+01:00'
+  shift:timestamp: '2022-12-19T07:59:21.46+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Trucks Arrive (3pm)
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: fb9434d6c3c628ac028c5a16a3d171d0
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '7'
+  time:timestamp: '2022-11-28T23:14:51.236+01:00'
+  shift:timestamp: '2022-12-19T07:59:21.46+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Warn of Break (1pm)
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 75d904e579c917ce8d85406967e94754
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '6'
+  time:timestamp: '2022-11-28T23:14:51.260+01:00'
+  shift:timestamp: '2022-12-19T07:59:21.46+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Start Picking
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a5
+  cpee:activity: a5
+  cpee:activity_uuid: 3c0f5a80b501919db33bb69a76cf60b4
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.21157938917530772'
+  time:timestamp: '2022-11-28T23:14:51.380+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Start Picking
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a5
+  cpee:activity: a5
+  cpee:activity_uuid: 3c0f5a80b501919db33bb69a76cf60b4
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: start
+    value: 1669673691.376764
+  time:timestamp: '2022-11-28T23:14:51.394+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Start Picking
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a5
+  cpee:activity: a5
+  cpee:activity_uuid: 3c0f5a80b501919db33bb69a76cf60b4
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:14:51.407+01:00'
+  shift:timestamp: '2022-12-19T08:13:00.00+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: 'Picking '
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a2
+  cpee:activity: a2
+  cpee:activity_uuid: 97419780a29ca9a124ae31d22c559f96
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: 5.271572787375096
+  time:timestamp: '2022-11-28T23:14:51.444+01:00'
+  shift:timestamp: '2022-12-19T08:13:00.00+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: 'Picking '
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a2
+  cpee:activity: a2
+  cpee:activity_uuid: 97419780a29ca9a124ae31d22c559f96
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 5.271572787375096'
+  time:timestamp: '2022-11-28T23:14:56.697+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: 'Picking '
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a2
+  cpee:activity: a2
+  cpee:activity_uuid: 97419780a29ca9a124ae31d22c559f96
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: break
+    value: true
+  - name: hours
+    value: 5.284321069717407
+  - name: picked
+    value: 471
+  time:timestamp: '2022-11-28T23:14:56.714+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: 'Picking '
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a2
+  cpee:activity: a2
+  cpee:activity_uuid: 97419780a29ca9a124ae31d22c559f96
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:14:56.729+01:00'
+  shift:timestamp: '2022-12-19T13:30:06.00+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Break
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a3
+  cpee:activity: a3
+  cpee:activity_uuid: 1e23afc66d2f8323dc29300a4eff8239
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '0.5'
+  time:timestamp: '2022-11-28T23:14:56.768+01:00'
+  shift:timestamp: '2022-12-19T13:30:06.00+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Warn of Break (1pm)
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 75d904e579c917ce8d85406967e94754
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 6'
+  time:timestamp: '2022-11-28T23:14:57.159+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Warn of Break (1pm)
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 75d904e579c917ce8d85406967e94754
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:14:57.167+01:00'
+  shift:timestamp: '2022-12-19T13:00:00.00+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Break
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a3
+  cpee:activity: a3
+  cpee:activity_uuid: 1e23afc66d2f8323dc29300a4eff8239
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.5'
+  time:timestamp: '2022-11-28T23:14:57.198+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Break
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a3
+  cpee:activity: a3
+  cpee:activity_uuid: 1e23afc66d2f8323dc29300a4eff8239
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: start
+    value: 1669673697.171318
+  time:timestamp: '2022-11-28T23:14:57.221+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Break
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a3
+  cpee:activity: a3
+  cpee:activity_uuid: 1e23afc66d2f8323dc29300a4eff8239
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:14:57.245+01:00'
+  shift:timestamp: '2022-12-19T13:58:43.19+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Picking
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a4
+  cpee:activity: a4
+  cpee:activity_uuid: c7cae1af77bfa90cc35769bdc34d9fab
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: 4.0954487615589095
+  time:timestamp: '2022-11-28T23:14:57.275+01:00'
+  shift:timestamp: '2022-12-19T13:58:43.19+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Trucks Arrive (3pm)
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: fb9434d6c3c628ac028c5a16a3d171d0
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 7'
+  time:timestamp: '2022-11-28T23:14:58.206+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Trucks Arrive (3pm)
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: fb9434d6c3c628ac028c5a16a3d171d0
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:14:58.227+01:00'
+  shift:timestamp: '2022-12-19T15:09:00.00+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 5b01bde7aa144a577485ed446d27c289
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '0.30'
+  time:timestamp: '2022-11-28T23:14:58.270+01:00'
+  shift:timestamp: '2022-12-19T15:09:00.00+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 5b01bde7aa144a577485ed446d27c289
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.30'
+  time:timestamp: '2022-11-28T23:14:58.531+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 5b01bde7aa144a577485ed446d27c289
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:14:58.539+01:00'
+  shift:timestamp: '2022-12-19T15:25:08.40+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 1a30d282fc82094cb3ea00b6934fd725
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '0.30'
+  time:timestamp: '2022-11-28T23:14:58.576+01:00'
+  shift:timestamp: '2022-12-19T15:25:08.40+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 1a30d282fc82094cb3ea00b6934fd725
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.30'
+  time:timestamp: '2022-11-28T23:14:58.822+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 1a30d282fc82094cb3ea00b6934fd725
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:14:58.830+01:00'
+  shift:timestamp: '2022-12-19T15:40:22.80+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: a49da0a985b7f4754d9def61c7908830
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '0.30'
+  time:timestamp: '2022-11-28T23:14:58.895+01:00'
+  shift:timestamp: '2022-12-19T15:40:22.80+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: a49da0a985b7f4754d9def61c7908830
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.30'
+  time:timestamp: '2022-11-28T23:14:59.140+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: a49da0a985b7f4754d9def61c7908830
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:14:59.150+01:00'
+  shift:timestamp: '2022-12-19T15:55:40.80+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 37414b87526dba9cb8e3fb25887d33e0
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '0.30'
+  time:timestamp: '2022-11-28T23:14:59.221+01:00'
+  shift:timestamp: '2022-12-19T15:55:40.80+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 37414b87526dba9cb8e3fb25887d33e0
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.30'
+  time:timestamp: '2022-11-28T23:14:59.688+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 37414b87526dba9cb8e3fb25887d33e0
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:14:59.696+01:00'
+  shift:timestamp: '2022-12-19T16:24:10.80+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 6d0aae4ee356b172ced3d58c2f4e70bb
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '0.30'
+  time:timestamp: '2022-11-28T23:14:59.773+01:00'
+  shift:timestamp: '2022-12-19T16:24:10.80+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 6d0aae4ee356b172ced3d58c2f4e70bb
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.30'
+  time:timestamp: '2022-11-28T23:15:00.016+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 6d0aae4ee356b172ced3d58c2f4e70bb
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:15:00.032+01:00'
+  shift:timestamp: '2022-12-19T16:39:43.20+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 2f6eb90a71302795696735dbbd2c6c37
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '0.30'
+  time:timestamp: '2022-11-28T23:15:00.122+01:00'
+  shift:timestamp: '2022-12-19T16:39:43.20+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 2f6eb90a71302795696735dbbd2c6c37
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.30'
+  time:timestamp: '2022-11-28T23:15:00.774+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 2f6eb90a71302795696735dbbd2c6c37
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:15:00.813+01:00'
+  shift:timestamp: '2022-12-19T17:21:10.80+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 7b7316e346bfdd22bc3c67c671eb6224
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '0.30'
+  time:timestamp: '2022-11-28T23:15:00.849+01:00'
+  shift:timestamp: '2022-12-19T17:21:10.80+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 7b7316e346bfdd22bc3c67c671eb6224
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.30'
+  time:timestamp: '2022-11-28T23:15:01.122+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 7b7316e346bfdd22bc3c67c671eb6224
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:15:01.128+01:00'
+  shift:timestamp: '2022-12-19T17:37:55.20+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: a93a3a40e4512409935f839aa2bf5fcb
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '0.30'
+  time:timestamp: '2022-11-28T23:15:01.177+01:00'
+  shift:timestamp: '2022-12-19T17:37:55.20+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: a93a3a40e4512409935f839aa2bf5fcb
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.30'
+  time:timestamp: '2022-11-28T23:15:01.669+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: a93a3a40e4512409935f839aa2bf5fcb
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:15:01.676+01:00'
+  shift:timestamp: '2022-12-19T18:07:51.60+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 4662f1b1437248bd4a3dc4168a24b18e
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '0.30'
+  time:timestamp: '2022-11-28T23:15:01.710+01:00'
+  shift:timestamp: '2022-12-19T18:07:51.60+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 4662f1b1437248bd4a3dc4168a24b18e
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.30'
+  time:timestamp: '2022-11-28T23:15:02.017+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 4662f1b1437248bd4a3dc4168a24b18e
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:15:02.032+01:00'
+  shift:timestamp: '2022-12-19T18:27:10.80+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 861a64c60d250129e2e84b0d2b681e20
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '0.30'
+  time:timestamp: '2022-11-28T23:15:02.086+01:00'
+  shift:timestamp: '2022-12-19T18:27:10.80+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 861a64c60d250129e2e84b0d2b681e20
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.30'
+  time:timestamp: '2022-11-28T23:15:02.111+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 861a64c60d250129e2e84b0d2b681e20
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:15:02.121+01:00'
+  shift:timestamp: '2022-12-19T18:29:16.80+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 91852d7514e1df99bbea3e672ee2f82c
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '0.30'
+  time:timestamp: '2022-11-28T23:15:02.172+01:00'
+  shift:timestamp: '2022-12-19T18:29:16.80+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Picking
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a4
+  cpee:activity: a4
+  cpee:activity_uuid: c7cae1af77bfa90cc35769bdc34d9fab
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 4.0954487615589095'
+  time:timestamp: '2022-11-28T23:15:02.188+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Picking
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a4
+  cpee:activity: a4
+  cpee:activity_uuid: c7cae1af77bfa90cc35769bdc34d9fab
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: finished
+    value: true
+  - name: hours
+    value: 9.38989543914795
+  - name: picked
+    value: 579
+  time:timestamp: '2022-11-28T23:15:02.202+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Picking
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a4
+  cpee:activity: a4
+  cpee:activity_uuid: c7cae1af77bfa90cc35769bdc34d9fab
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:15:02.216+01:00'
+  shift:timestamp: '2022-12-19T18:55:10.79+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 91852d7514e1df99bbea3e672ee2f82c
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.30'
+  time:timestamp: '2022-11-28T23:15:02.242+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Load Trucks
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a9
+  cpee:activity: a9
+  cpee:activity_uuid: 91852d7514e1df99bbea3e672ee2f82c
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:15:02.251+01:00'
+  shift:timestamp: '2022-12-19T18:34:01.20+01:00'
+---
+event:
+  concept:instance: 6896
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: gateway/join
+  time:timestamp: '2022-11-28T23:15:02.282+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Start Spoiled Fruit Data Collection
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a12
+  cpee:activity: a12
+  cpee:activity_uuid: 42d4b0127ded269101d96ec87156ce75
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: 0.5631700874944221
+  time:timestamp: '2022-11-28T23:15:02.299+01:00'
+  shift:timestamp: '2022-12-19T18:55:10.79+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Start Spoiled Fruit Data Collection
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a12
+  cpee:activity: a12
+  cpee:activity_uuid: 42d4b0127ded269101d96ec87156ce75
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.5631700874944221'
+  time:timestamp: '2022-11-28T23:15:02.390+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Start Spoiled Fruit Data Collection
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a12
+  cpee:activity: a12
+  cpee:activity_uuid: 42d4b0127ded269101d96ec87156ce75
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:15:02.397+01:00'
+  shift:timestamp: '2022-12-19T19:01:03.59+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Collect Spoiled Fruit Data
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a11
+  cpee:activity: a11
+  cpee:activity_uuid: 66982aae97b32d48f08ad5e0a46a6eb4
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: 0.4807461044780682
+  time:timestamp: '2022-11-28T23:15:02.427+01:00'
+  shift:timestamp: '2022-12-19T19:01:03.59+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Collect Spoiled Fruit Data
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a11
+  cpee:activity: a11
+  cpee:activity_uuid: 66982aae97b32d48f08ad5e0a46a6eb4
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.4807461044780682'
+  time:timestamp: '2022-11-28T23:15:02.610+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Collect Spoiled Fruit Data
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a11
+  cpee:activity: a11
+  cpee:activity_uuid: 66982aae97b32d48f08ad5e0a46a6eb4
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: spoiled
+    value: 13
+  time:timestamp: '2022-11-28T23:15:02.625+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Collect Spoiled Fruit Data
+  concept:endpoint: https-post://cpee.org/services/timeout-user.php
+  id:id: a11
+  cpee:activity: a11
+  cpee:activity_uuid: 66982aae97b32d48f08ad5e0a46a6eb4
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:15:02.640+01:00'
+  shift:timestamp: '2022-12-19T19:13:50.39+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Send Recorded Kilos and Hours
+  concept:endpoint: https-post://cpee.org/services/timeout-send.php
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 87a4fc057023fd70c296340ca6a1d5dc
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '0.1'
+  - name: ignore
+    value: '{ "hours": 9.38989543914795, "amount": 579, "spoiled": 13 }'
+  time:timestamp: '2022-11-28T23:15:02.674+01:00'
+  shift:timestamp: '2022-12-19T19:13:50.39+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Send Recorded Kilos and Hours
+  concept:endpoint: https-post://cpee.org/services/timeout-send.php
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 87a4fc057023fd70c296340ca6a1d5dc
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0.1'
+  time:timestamp: '2022-11-28T23:15:02.716+01:00'
+---
+event:
+  concept:instance: 6896
+  concept:name: Send Recorded Kilos and Hours
+  concept:endpoint: https-post://cpee.org/services/timeout-send.php
+  id:id: a10
+  cpee:activity: a10
+  cpee:activity_uuid: 87a4fc057023fd70c296340ca6a1d5dc
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-28T23:15:02.723+01:00'
+  shift:timestamp: '2022-12-19T19:16:46.79+01:00'
+---
+event:
+  concept:instance: 6896
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 8707f9a0-edd8-4541-90b3-65f84ad0ee29
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: finished
+  time:timestamp: '2022-11-28T23:15:02.905+01:00'

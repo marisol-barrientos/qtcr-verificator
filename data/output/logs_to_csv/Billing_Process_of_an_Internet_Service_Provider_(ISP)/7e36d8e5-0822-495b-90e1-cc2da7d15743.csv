@@ -1,0 +1,17 @@
+concept:name,cpee:activity_uuid,concept:name,lifecycle:transition,shift:timestamp
+send invoice,f2119f9f35cd9cd32b638c7375c72125,send invoice,start,2024-04-01 07:30:00+02:00
+send invoice,f2119f9f35cd9cd32b638c7375c72125,send invoice,complete,2024-04-01 07:30:03+02:00
+customer pays,7aad51d534bab0fe8992682c63885cca,customer pays,start,2024-04-01 07:30:03+02:00
+wait 7 days,27da1dcfa29c3d652a9628f5b3359f64,wait 7 days,start,2024-04-01 07:30:03+02:00
+wait 7 days,27da1dcfa29c3d652a9628f5b3359f64,wait 7 days,complete,2024-04-08 07:30:03+02:00
+debit outstanding amount,bd1cf493cbb27f7e632f74f44ec6ea2b,debit outstanding amount,start,2024-04-08 07:30:03+02:00
+debit outstanding amount,bd1cf493cbb27f7e632f74f44ec6ea2b,debit outstanding amount,complete,2024-04-08 07:30:06+02:00
+wait 1 day,dbefcd54123b0c5c08ff62f0954b591f,wait 1 day,start,2024-04-08 07:30:06+02:00
+customer pays,7aad51d534bab0fe8992682c63885cca,customer pays,complete,2024-04-02 15:19:29.400000+02:00
+wait 1 day,dbefcd54123b0c5c08ff62f0954b591f,wait 1 day,complete,2024-04-09 07:30:06+02:00
+notify customer,ecec6628323ebe94c85a4294eb7e06b1,notify customer,start,2024-04-09 07:30:06+02:00
+notify customer,ecec6628323ebe94c85a4294eb7e06b1,notify customer,complete,2024-04-09 07:30:09+02:00
+wait 1 day,dca47db0a81d4683b5cc4f95bd5a0693,wait 1 day,start,2024-04-09 07:30:09+02:00
+wait 1 day,dca47db0a81d4683b5cc4f95bd5a0693,wait 1 day,complete,2024-04-10 07:30:09+02:00
+re-attempt debit outstanding amount,e3316db0d1fe03bf91dd9d028cb4ce07,re-attempt debit outstanding amount,start,2024-04-10 07:30:09+02:00
+re-attempt debit outstanding amount,e3316db0d1fe03bf91dd9d028cb4ce07,re-attempt debit outstanding amount,complete,2024-04-10 07:30:12+02:00

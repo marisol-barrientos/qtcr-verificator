@@ -1,0 +1,849 @@
+---
+log:
+  namespaces:
+    stream: https://cpee.org/datastream/
+    ssn: http://www.w3.org/ns/ssn/
+    sosa: http://www.w3.org/ns/sosa/
+  xes:
+    creator: cpee.org
+    features: nested-attributes
+  extension:
+    time: http://www.xes-standard.org/time.xesext
+    concept: http://www.xes-standard.org/concept.xesext
+    id: http://www.xes-standard.org/identity.xesext
+    lifecycle: http://www.xes-standard.org/lifecycle.xesext
+    cpee: http://cpee.org/cpee.xesext
+    stream: https://cpee.org/datastream/datastream.xesext
+    shift: https://cpee.org/time-shifting/time-shifting.xesext
+  global:
+    trace:
+      concept:name: __INVALID__
+      cpee:name: __INVALID__
+    event:
+      concept:instance: -1
+      concept:name: __INVALID__
+      concept:endpoint: ''
+      id:id: ''
+      cpee:uuid: ''
+      lifecycle:transition: complete
+      cpee:lifecycle:transition: activity/calling
+      time:timestamp: ''
+  trace:
+    concept:name: 6997
+    cpee:name: Expense Report
+    cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+---
+event:
+  concept:instance: 6997
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: ready
+  time:timestamp: '2022-11-29T00:58:47.404+01:00'
+---
+event:
+  concept:instance: 6997
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: basedate
+    value: '2022-12-06'
+  time:timestamp: '2022-11-29T00:58:47.496+01:00'
+---
+event:
+  concept:instance: 6997
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: endpoints/change
+  data:
+  - name: timeout
+    value: https-post://cpee.org/services/timeout.php
+  - name: user
+    value: https-post://cpee.org/services/timeout-user.php
+  - name: auto
+    value: https-post://cpee.org/services/timeout-auto.php
+  - name: receive
+    value: https-post://cpee.org/services/timeout-receive.php
+  - name: send
+    value: https-post://cpee.org/services/timeout-send.php
+  - name: subprocess
+    value: https-post://cpee.org/services/timeout-subprocess.php
+  time:timestamp: '2022-11-29T00:58:47.507+01:00'
+---
+event:
+  concept:instance: 6997
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: attributes/change
+  data:
+  - name: info
+    value: Expense Report
+  - name: theme
+    value: extended
+  - name: creator
+    value: Christine Ashcreek
+  - name: modeltype
+    value: CPEE
+  - name: author
+    value: Christine Ashcreek
+  - name: guarded
+    value: none
+  - name: guarded_id
+    value: ''
+  - name: model_uuid
+    value: 4de76481-dc56-4cc2-bf49-ad2e34193149
+  - name: model_version
+    value: ''
+  - name: design_dir
+    value: Logs_TIE.dir
+  - name: design_stage
+    value: development
+  time:timestamp: '2022-11-29T00:58:47.514+01:00'
+---
+event:
+  concept:instance: 6997
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: description/change
+  cpee:description: |
+    <?xml version="1.0"?>
+    <description xmlns="http://cpee.org/ns/description/1.0">
+      <_shifting>
+        <_shifting_factor>1 day</_shifting_factor>
+        <_shifting_start>!data.basedate + ", 7:30"</_shifting_start>
+      </_shifting>
+      <_context_data_analysis>
+        <probes/>
+        <ips/>
+      </_context_data_analysis>
+      <call id="a11" endpoint="receive">
+        <parameters>
+          <label>receive expense report</label>
+          <arguments>
+            <timeout>1</timeout>
+          </arguments>
+        </parameters>
+        <code>
+          <prepare/>
+          <finalize output="result">data.value = rand(10..500)
+    data.account_exists = rand(0..1)</finalize>
+          <update output="result"/>
+          <rescue output="result"/>
+        </code>
+        <annotations>
+          <_timing>
+            <_timing_weight/>
+            <_timing_avg/>
+            <explanations/>
+          </_timing>
+          <_shifting>
+            <_shifting_type>Duration</_shifting_type>
+            <_shifting_expression>3 seconds</_shifting_expression>
+          </_shifting>
+          <_context_data_analysis>
+            <probes/>
+            <ips/>
+          </_context_data_analysis>
+          <report>
+            <url/>
+          </report>
+          <_notes>
+            <_notes_general/>
+          </_notes>
+        </annotations>
+        <documentation>
+          <input/>
+          <output/>
+          <implementation>
+            <description/>
+          </implementation>
+          <code>
+            <description/>
+          </code>
+        </documentation>
+      </call>
+      <parallel wait="1" cancel="last">
+        <parallel_branch pass="" local="">
+          <choose mode="exclusive">
+            <alternative condition="data.account_exists == 0">
+              <_probability>
+                <_probability_min/>
+                <_probability_max/>
+                <_probability_avg/>
+              </_probability>
+            </alternative>
+            <otherwise>
+              <call id="a8" endpoint="auto">
+                <parameters>
+                  <label>create account</label>
+                  <arguments>
+                    <timeout>1</timeout>
+                  </arguments>
+                </parameters>
+                <annotations>
+                  <_timing>
+                    <_timing_weight/>
+                    <_timing_avg/>
+                    <explanations/>
+                  </_timing>
+                  <_shifting>
+                    <_shifting_type>Duration</_shifting_type>
+                    <_shifting_expression>3 seconds</_shifting_expression>
+                  </_shifting>
+                  <_context_data_analysis>
+                    <probes/>
+                    <ips/>
+                  </_context_data_analysis>
+                  <report>
+                    <url/>
+                  </report>
+                  <_notes>
+                    <_notes_general/>
+                  </_notes>
+                </annotations>
+                <documentation>
+                  <input/>
+                  <output/>
+                  <implementation>
+                    <description/>
+                  </implementation>
+                </documentation>
+              </call>
+            </otherwise>
+          </choose>
+          <choose mode="exclusive">
+            <alternative condition="data.value &gt; 200">
+              <call id="a9" endpoint="user">
+                <parameters>
+                  <label>supervisor review</label>
+                  <arguments>
+                    <timeout>!rand(0..35)</timeout>
+                  </arguments>
+                </parameters>
+                <code>
+                  <prepare/>
+                  <finalize output="result">data.authorize = rand(0..1)</finalize>
+                  <update output="result"/>
+                  <rescue output="result"/>
+                </code>
+                <annotations>
+                  <_timing>
+                    <_timing_weight/>
+                    <_timing_avg/>
+                    <explanations/>
+                  </_timing>
+                  <_shifting>
+                    <_shifting_type>Duration</_shifting_type>
+                  </_shifting>
+                  <_context_data_analysis>
+                    <probes/>
+                    <ips/>
+                  </_context_data_analysis>
+                  <report>
+                    <url/>
+                  </report>
+                  <_notes>
+                    <_notes_general/>
+                  </_notes>
+                </annotations>
+                <documentation>
+                  <input/>
+                  <output/>
+                  <implementation>
+                    <description/>
+                  </implementation>
+                  <code>
+                    <description/>
+                  </code>
+                </documentation>
+              </call>
+              <choose mode="exclusive">
+                <alternative condition="data.authorize == 1">
+                  <_probability>
+                    <_probability_min/>
+                    <_probability_max/>
+                    <_probability_avg/>
+                  </_probability>
+                  <call id="a10" endpoint="send">
+                    <parameters>
+                      <label>send rejection notice by email</label>
+                      <arguments>
+                        <timeout>0</timeout>
+                        <ignore/>
+                      </arguments>
+                    </parameters>
+                    <annotations>
+                      <_timing>
+                        <_timing_weight/>
+                        <_timing_avg/>
+                        <explanations/>
+                      </_timing>
+                      <_shifting>
+                        <_shifting_type>Duration</_shifting_type>
+                        <_shifting_expression>3 seconds</_shifting_expression>
+                      </_shifting>
+                      <_context_data_analysis>
+                        <probes/>
+                        <ips/>
+                      </_context_data_analysis>
+                      <report>
+                        <url/>
+                      </report>
+                      <_notes>
+                        <_notes_general/>
+                      </_notes>
+                    </annotations>
+                    <documentation>
+                      <input/>
+                      <output/>
+                      <implementation>
+                        <description/>
+                      </implementation>
+                    </documentation>
+                  </call>
+                  <terminate/>
+                </alternative>
+                <otherwise/>
+              </choose>
+              <_probability>
+                <_probability_min/>
+                <_probability_max/>
+                <_probability_avg/>
+              </_probability>
+            </alternative>
+            <otherwise>
+              <call id="a7" endpoint="auto">
+                <parameters>
+                  <label>approve expense report automatically</label>
+                  <arguments>
+                    <timeout>0</timeout>
+                  </arguments>
+                </parameters>
+                <annotations>
+                  <_timing>
+                    <_timing_weight/>
+                    <_timing_avg/>
+                    <explanations/>
+                  </_timing>
+                  <_shifting>
+                    <_shifting_type>Duration</_shifting_type>
+                    <_shifting_expression>3 seconds</_shifting_expression>
+                  </_shifting>
+                  <_context_data_analysis>
+                    <probes/>
+                    <ips/>
+                  </_context_data_analysis>
+                  <report>
+                    <url/>
+                  </report>
+                  <_notes>
+                    <_notes_general/>
+                  </_notes>
+                </annotations>
+                <documentation>
+                  <input/>
+                  <output/>
+                  <implementation>
+                    <description/>
+                  </implementation>
+                </documentation>
+              </call>
+            </otherwise>
+          </choose>
+          <call id="a6" endpoint="send">
+            <parameters>
+              <label>send reimbursement to deposit bank account</label>
+              <arguments>
+                <timeout>1</timeout>
+                <ignore/>
+              </arguments>
+            </parameters>
+            <annotations>
+              <_timing>
+                <_timing_weight/>
+                <_timing_avg/>
+                <explanations/>
+              </_timing>
+              <_shifting>
+                <_shifting_type>Duration</_shifting_type>
+              </_shifting>
+              <_context_data_analysis>
+                <probes/>
+                <ips/>
+              </_context_data_analysis>
+              <report>
+                <url/>
+              </report>
+              <_notes>
+                <_notes_general/>
+              </_notes>
+            </annotations>
+            <documentation>
+              <input/>
+              <output/>
+              <implementation>
+                <description/>
+              </implementation>
+            </documentation>
+          </call>
+        </parallel_branch>
+        <parallel_branch pass="" local="">
+          <call id="a1" endpoint="timeout">
+            <parameters>
+              <label>wait 7 days</label>
+              <arguments>
+                <timeout>7</timeout>
+              </arguments>
+            </parameters>
+            <annotations>
+              <_timing>
+                <_timing_weight/>
+                <_timing_avg/>
+                <explanations/>
+              </_timing>
+              <_shifting>
+                <_shifting_type>Duration</_shifting_type>
+                <_shifting_expression>7 days</_shifting_expression>
+              </_shifting>
+              <_context_data_analysis>
+                <probes/>
+                <ips/>
+              </_context_data_analysis>
+              <report>
+                <url/>
+              </report>
+              <_notes>
+                <_notes_general/>
+              </_notes>
+            </annotations>
+            <documentation>
+              <input/>
+              <output/>
+              <implementation>
+                <description/>
+              </implementation>
+            </documentation>
+          </call>
+          <call id="a3" endpoint="send">
+            <parameters>
+              <label>send "approval in progress" email</label>
+              <arguments>
+                <timeout>0</timeout>
+                <ignore/>
+              </arguments>
+            </parameters>
+            <annotations>
+              <_timing>
+                <_timing_weight/>
+                <_timing_avg/>
+                <explanations/>
+              </_timing>
+              <_shifting>
+                <_shifting_type>Duration</_shifting_type>
+                <_shifting_expression>3 seconds</_shifting_expression>
+              </_shifting>
+              <_context_data_analysis>
+                <probes/>
+                <ips/>
+              </_context_data_analysis>
+              <report>
+                <url/>
+              </report>
+              <_notes>
+                <_notes_general/>
+              </_notes>
+            </annotations>
+            <documentation>
+              <input/>
+              <output/>
+              <implementation>
+                <description/>
+              </implementation>
+            </documentation>
+          </call>
+          <call id="a4" endpoint="timeout">
+            <parameters>
+              <label>wait 23 days</label>
+              <arguments>
+                <timeout>23</timeout>
+              </arguments>
+            </parameters>
+            <annotations>
+              <_timing>
+                <_timing_weight/>
+                <_timing_avg/>
+                <explanations/>
+              </_timing>
+              <_shifting>
+                <_shifting_type>Duration</_shifting_type>
+                <_shifting_expression>7 days</_shifting_expression>
+              </_shifting>
+              <_context_data_analysis>
+                <probes/>
+                <ips/>
+              </_context_data_analysis>
+              <report>
+                <url/>
+              </report>
+              <_notes>
+                <_notes_general/>
+              </_notes>
+            </annotations>
+            <documentation>
+              <input/>
+              <output/>
+              <implementation>
+                <description/>
+              </implementation>
+            </documentation>
+          </call>
+          <call id="a5" endpoint="send">
+            <parameters>
+              <label>send cancellation notice</label>
+              <arguments>
+                <timeout>0</timeout>
+                <ignore/>
+              </arguments>
+            </parameters>
+            <annotations>
+              <_timing>
+                <_timing_weight/>
+                <_timing_avg/>
+                <explanations/>
+              </_timing>
+              <_shifting>
+                <_shifting_type>Duration</_shifting_type>
+                <_shifting_expression>3 seconds</_shifting_expression>
+              </_shifting>
+              <_context_data_analysis>
+                <probes/>
+                <ips/>
+              </_context_data_analysis>
+              <report>
+                <url/>
+              </report>
+              <_notes>
+                <_notes_general/>
+              </_notes>
+            </annotations>
+            <documentation>
+              <input/>
+              <output/>
+              <implementation>
+                <description/>
+              </implementation>
+            </documentation>
+          </call>
+          <call id="a2" endpoint="send">
+            <parameters>
+              <label>advice employee to re-submit the expense report</label>
+              <arguments>
+                <timeout>0</timeout>
+                <ignore/>
+              </arguments>
+            </parameters>
+            <annotations>
+              <_timing>
+                <_timing_weight/>
+                <_timing_avg/>
+                <explanations/>
+              </_timing>
+              <_shifting>
+                <_shifting_type>Duration</_shifting_type>
+                <_shifting_expression>3 seconds</_shifting_expression>
+              </_shifting>
+              <_context_data_analysis>
+                <probes/>
+                <ips/>
+              </_context_data_analysis>
+              <report>
+                <url/>
+              </report>
+              <_notes>
+                <_notes_general/>
+              </_notes>
+            </annotations>
+            <documentation>
+              <input/>
+              <output/>
+              <implementation>
+                <description/>
+              </implementation>
+            </documentation>
+          </call>
+          <terminate/>
+        </parallel_branch>
+      </parallel>
+    </description>
+  time:timestamp: '2022-11-29T00:58:47.667+01:00'
+---
+event:
+  concept:instance: 6997
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: running
+  time:timestamp: '2022-11-29T00:58:49.953+01:00'
+---
+event:
+  concept:instance: 6997
+  concept:name: receive expense report
+  concept:endpoint: https-post://cpee.org/services/timeout-receive.php
+  id:id: a11
+  cpee:activity: a11
+  cpee:activity_uuid: ee786bc5254c8be6ec3542cdd7e4497f
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '1'
+  time:timestamp: '2022-11-29T00:58:50.006+01:00'
+  shift:timestamp: '2022-12-06T07:30:00.00+01:00'
+---
+event:
+  concept:instance: 6997
+  concept:name: receive expense report
+  concept:endpoint: https-post://cpee.org/services/timeout-receive.php
+  id:id: a11
+  cpee:activity: a11
+  cpee:activity_uuid: ee786bc5254c8be6ec3542cdd7e4497f
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 1'
+  time:timestamp: '2022-11-29T00:58:50.902+01:00'
+---
+event:
+  concept:instance: 6997
+  concept:name: receive expense report
+  concept:endpoint: https-post://cpee.org/services/timeout-receive.php
+  id:id: a11
+  cpee:activity: a11
+  cpee:activity_uuid: ee786bc5254c8be6ec3542cdd7e4497f
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: dataelements/change
+  data:
+  - name: value
+    value: 200
+  - name: account_exists
+    value: 1
+  time:timestamp: '2022-11-29T00:58:50.919+01:00'
+---
+event:
+  concept:instance: 6997
+  concept:name: receive expense report
+  concept:endpoint: https-post://cpee.org/services/timeout-receive.php
+  id:id: a11
+  cpee:activity: a11
+  cpee:activity_uuid: ee786bc5254c8be6ec3542cdd7e4497f
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-29T00:58:50.932+01:00'
+  shift:timestamp: '2022-12-06T07:30:03.00+01:00'
+---
+event:
+  concept:instance: 6997
+  concept:name: create account
+  concept:endpoint: https-post://cpee.org/services/timeout-auto.php
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 8d4e0352d04ce50d0b9cf0e7b6a566d0
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '1'
+  time:timestamp: '2022-11-29T00:58:50.970+01:00'
+  shift:timestamp: '2022-12-06T07:30:03.00+01:00'
+---
+event:
+  concept:instance: 6997
+  concept:name: wait 7 days
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a1
+  cpee:activity: a1
+  cpee:activity_uuid: 9b321dac7848c3f4e2fba957a1a5df3c
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '7'
+  time:timestamp: '2022-11-29T00:58:51.048+01:00'
+  shift:timestamp: '2022-12-06T07:30:03.00+01:00'
+---
+event:
+  concept:instance: 6997
+  concept:name: create account
+  concept:endpoint: https-post://cpee.org/services/timeout-auto.php
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 8d4e0352d04ce50d0b9cf0e7b6a566d0
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 1'
+  time:timestamp: '2022-11-29T00:58:51.951+01:00'
+---
+event:
+  concept:instance: 6997
+  concept:name: create account
+  concept:endpoint: https-post://cpee.org/services/timeout-auto.php
+  id:id: a8
+  cpee:activity: a8
+  cpee:activity_uuid: 8d4e0352d04ce50d0b9cf0e7b6a566d0
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-29T00:58:51.961+01:00'
+  shift:timestamp: '2022-12-06T07:30:06.00+01:00'
+---
+event:
+  concept:instance: 6997
+  concept:name: approve expense report automatically
+  concept:endpoint: https-post://cpee.org/services/timeout-auto.php
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: a7fdaf71f851a7aedc522034f3fb7162
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '0'
+  time:timestamp: '2022-11-29T00:58:51.991+01:00'
+  shift:timestamp: '2022-12-06T07:30:06.00+01:00'
+---
+event:
+  concept:instance: 6997
+  concept:name: approve expense report automatically
+  concept:endpoint: https-post://cpee.org/services/timeout-auto.php
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: a7fdaf71f851a7aedc522034f3fb7162
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 0'
+  time:timestamp: '2022-11-29T00:58:52.055+01:00'
+---
+event:
+  concept:instance: 6997
+  concept:name: approve expense report automatically
+  concept:endpoint: https-post://cpee.org/services/timeout-auto.php
+  id:id: a7
+  cpee:activity: a7
+  cpee:activity_uuid: a7fdaf71f851a7aedc522034f3fb7162
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-29T00:58:52.062+01:00'
+  shift:timestamp: '2022-12-06T07:30:09.00+01:00'
+---
+event:
+  concept:instance: 6997
+  concept:name: send reimbursement to deposit bank account
+  concept:endpoint: https-post://cpee.org/services/timeout-send.php
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 4ee17bad2c8e337b8157b331b7fd2005
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: start
+  cpee:lifecycle:transition: activity/calling
+  data:
+  - name: timeout
+    value: '1'
+  - name: ignore
+    value: 
+  time:timestamp: '2022-11-29T00:58:52.097+01:00'
+  shift:timestamp: '2022-12-06T07:30:09.00+01:00'
+---
+event:
+  concept:instance: 6997
+  concept:name: send reimbursement to deposit bank account
+  concept:endpoint: https-post://cpee.org/services/timeout-send.php
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 4ee17bad2c8e337b8157b331b7fd2005
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 1'
+  time:timestamp: '2022-11-29T00:58:52.929+01:00'
+---
+event:
+  concept:instance: 6997
+  concept:name: send reimbursement to deposit bank account
+  concept:endpoint: https-post://cpee.org/services/timeout-send.php
+  id:id: a6
+  cpee:activity: a6
+  cpee:activity_uuid: 4ee17bad2c8e337b8157b331b7fd2005
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: complete
+  cpee:lifecycle:transition: activity/done
+  time:timestamp: '2022-11-29T00:58:52.936+01:00'
+  shift:timestamp: '2022-12-07T03:38:18.59+01:00'
+---
+event:
+  concept:instance: 6997
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: start
+  cpee:lifecycle:transition: gateway/join
+  time:timestamp: '2022-11-29T00:58:52.975+01:00'
+---
+event:
+  concept:instance: 6997
+  concept:name: wait 7 days
+  concept:endpoint: https-post://cpee.org/services/timeout.php
+  id:id: a1
+  cpee:activity: a1
+  cpee:activity_uuid: 9b321dac7848c3f4e2fba957a1a5df3c
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: activity/receiving
+  raw:
+  - name: result
+    mimetype: text/html
+    data: 'Timeout: 7'
+  time:timestamp: '2022-11-29T00:58:57.932+01:00'
+---
+event:
+  concept:instance: 6997
+  id:id: external
+  cpee:activity: external
+  cpee:instance: 5a08cf8f-1c06-47d8-ba69-7d54962323ae
+  lifecycle:transition: unknown
+  cpee:lifecycle:transition: state/change
+  cpee:state: finished
+  time:timestamp: '2022-11-29T00:58:57.945+01:00'

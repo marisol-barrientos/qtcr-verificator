@@ -1,0 +1,12 @@
+
+Process Description: Steps_to_follow_after_receiving_Expense_Report.txt
+Sentence: If the request is not completed in 7 days, then the employee must receive an “approval in progress” email.
+Annotated Time: 7 days
+Time Type: DURATION
+Value: P7D
+
+Process Description: Steps_to_follow_after_receiving_Expense_Report.txt
+Sentence: If the request is not finished within 30 days, then the process is stopped and the employee.
+Annotated Time: 30 days
+Time Type: DURATION
+Value: P30D
